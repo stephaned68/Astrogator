@@ -48,10 +48,10 @@ namespace Astrogator
             this.DistanceLabel = new System.Windows.Forms.Label();
             this.CalculateButton = new System.Windows.Forms.Button();
             this.StarshipGroup = new System.Windows.Forms.GroupBox();
-            this.StarshipCombo = new System.Windows.Forms.ComboBox();
-            this.StarshipSpeed = new System.Windows.Forms.TextBox();
-            this.StarshipLabel = new System.Windows.Forms.Label();
             this.StarshipSpeedLabel = new System.Windows.Forms.Label();
+            this.StarshipLabel = new System.Windows.Forms.Label();
+            this.StarshipSpeed = new System.Windows.Forms.TextBox();
+            this.StarshipCombo = new System.Windows.Forms.ComboBox();
             this.departureGroup.SuspendLayout();
             this.arrivalGroup.SuspendLayout();
             this.StarshipGroup.SuspendLayout();
@@ -237,30 +237,6 @@ namespace Astrogator
             this.StarshipGroup.TabStop = false;
             this.StarshipGroup.Text = "Vaisseau";
             // 
-            // StarshipCombo
-            // 
-            this.StarshipCombo.FormattingEnabled = true;
-            this.StarshipCombo.Location = new System.Drawing.Point(8, 42);
-            this.StarshipCombo.Name = "StarshipCombo";
-            this.StarshipCombo.Size = new System.Drawing.Size(207, 25);
-            this.StarshipCombo.TabIndex = 0;
-            // 
-            // StarshipSpeed
-            // 
-            this.StarshipSpeed.Location = new System.Drawing.Point(223, 42);
-            this.StarshipSpeed.Name = "StarshipSpeed";
-            this.StarshipSpeed.Size = new System.Drawing.Size(99, 22);
-            this.StarshipSpeed.TabIndex = 1;
-            // 
-            // StarshipLabel
-            // 
-            this.StarshipLabel.AutoSize = true;
-            this.StarshipLabel.Location = new System.Drawing.Point(9, 21);
-            this.StarshipLabel.Name = "StarshipLabel";
-            this.StarshipLabel.Size = new System.Drawing.Size(52, 17);
-            this.StarshipLabel.TabIndex = 2;
-            this.StarshipLabel.Text = "Classe :";
-            // 
             // StarshipSpeedLabel
             // 
             this.StarshipSpeedLabel.AutoSize = true;
@@ -269,6 +245,31 @@ namespace Astrogator
             this.StarshipSpeedLabel.Size = new System.Drawing.Size(57, 17);
             this.StarshipSpeedLabel.TabIndex = 3;
             this.StarshipSpeedLabel.Text = "Vitesse :";
+            // 
+            // StarshipLabel
+            // 
+            this.StarshipLabel.AutoSize = true;
+            this.StarshipLabel.Location = new System.Drawing.Point(9, 21);
+            this.StarshipLabel.Name = "StarshipLabel";
+            this.StarshipLabel.Size = new System.Drawing.Size(116, 17);
+            this.StarshipLabel.TabIndex = 2;
+            this.StarshipLabel.Text = "Vaisseau (classe) :";
+            // 
+            // StarshipSpeed
+            // 
+            this.StarshipSpeed.Location = new System.Drawing.Point(223, 42);
+            this.StarshipSpeed.Name = "StarshipSpeed";
+            this.StarshipSpeed.Size = new System.Drawing.Size(99, 22);
+            this.StarshipSpeed.TabIndex = 1;
+            // 
+            // StarshipCombo
+            // 
+            this.StarshipCombo.FormattingEnabled = true;
+            this.StarshipCombo.Location = new System.Drawing.Point(8, 42);
+            this.StarshipCombo.Name = "StarshipCombo";
+            this.StarshipCombo.Size = new System.Drawing.Size(207, 25);
+            this.StarshipCombo.TabIndex = 0;
+            this.StarshipCombo.SelectedIndexChanged += new System.EventHandler(this.StarshipCombo_SelectedIndexChanged);
             // 
             // MainForm
             // 

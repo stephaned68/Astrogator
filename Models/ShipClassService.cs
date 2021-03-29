@@ -8,32 +8,31 @@ using System.Threading.Tasks;
 
 namespace Astrogator.Models
 {
-    class StarshipService
+    class ShipClassService
     {
         public static string DataFile
         {
             get
             {
-                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Astrogator", "starships.json");
+                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Astrogator", "ship-classes.json");
             }
         }
 
-        public static IEnumerable<Starship> GetAll()
+        public static IEnumerable<ShipClass> GetAll()
         {
-            var list = new List<Starship>();
+            var list = new List<ShipClass>();
 
             if (File.Exists(DataFile))
             {
                 var jsonData = File.ReadAllText(DataFile);
                 if (jsonData != "")
                 {
-                    list = JsonSerializer.Deserialize<List<Starship>>(jsonData)
-                        .OrderBy(s => s.Class)
-                        .ThenBy(s => s.Name)
+                    list = JsonSerializer.Deserialize<List<ShipClass>>(jsonData)
+                        .OrderBy(c => c.Name)
                         .ToList();
                 }
             }
-
+            
             return list;
         }
     }

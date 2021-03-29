@@ -19,11 +19,20 @@ namespace Astrogator.Models
         }
         public static IEnumerable<StarSystem> GetAll()
         {
-            var jsonData = File.ReadAllText(DataFile);
-            var list = JsonSerializer.Deserialize<List<StarSystem>>(jsonData)
-                .OrderBy(s => s.Affiliation)
-                .ThenBy(s => s.Name)
-                .ToList();
+            var list = new List<StarSystem>();
+
+            if (File.Exists(DataFile))
+            {
+                var jsonData = File.ReadAllText(DataFile);
+                if (jsonData != "")
+                {
+                    list = JsonSerializer.Deserialize<List<StarSystem>>(jsonData)
+                        .OrderBy(s => s.Affiliation)
+                        .ThenBy(s => s.Name)
+                        .ToList();
+                }
+            }
+            
             return list;
         }
 

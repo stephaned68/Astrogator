@@ -41,11 +41,32 @@ namespace Astrogator
             combo.DisplayMember = "Name";
         }
 
+        private void loadShipCombo()
+        {
+            var shipCombo = new List<ShipComboItem>();
+            shipCombo.Add(new ShipComboItem { Name = "", Speed = 0 });
+
+            foreach (var shipClass in ShipClassService.GetAll())
+            {
+                shipCombo.Add(new ShipComboItem { Name = $"<< Classe : {shipClass.Name} >>", Speed = shipClass.BaseSpeed });
+                var ships = StarshipService.GetAll()
+                    .Where(s => s.Class == shipClass.Name)
+                    .ToList();
+                foreach (var ship in ships)
+                {
+                    shipCombo.Add(new ShipComboItem { Name = ship.Name, Speed = ship.FTLSpeed });
+                }
+            }
+            StarshipCombo.DataSource = shipCombo;
+            StarshipCombo.DisplayMember = "Name";
+        }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
             loadCombo(DepartureCombo);
             loadCombo(ArrivalCombo);
 
+            loadShipCombo();
         }
 
         private void RefreshDistance()
@@ -85,6 +106,11 @@ namespace Astrogator
         private void CalculateButton_Click(object sender, EventArgs e)
         {
             RefreshDistance();
+        }
+
+        private void StarshipCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

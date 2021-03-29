@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace Astrogator.Models
 {
-    class Starship
+    class ShipClass
     {
         public string Name { get; set; }
 
-        public string Class { get; set; }
-
-        public int FTLSpeed { get; set; }
+        public int BaseSpeed { get; set; }
     }
 }
