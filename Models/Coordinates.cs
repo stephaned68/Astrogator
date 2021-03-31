@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Astrogator.Models
 {
-    class ShipComboItem
+    public class Coordinates
     {
-        public string Name { get; set; }
+        public int Longitude { get; set; }
 
-        public int Speed { get; set; }
+        public int Latitude { get; set; }
+
+        public int Height { get; set; }
     }
 }

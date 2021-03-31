@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Astrogator.Models
 {
-    class ShipClass
+    public class ShipClass
     {
         public string Name { get; set; }
 
