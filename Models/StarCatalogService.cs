@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Astrogator.Models
 {
-    class StarSystemService
+    class StarCatalogService
     {
         public static string DataFile 
         {
@@ -17,26 +17,44 @@ namespace Astrogator.Models
                 return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Astrogator", "star-catalog.json");
             }
         }
-        public static IEnumerable<StarSystem> GetAll()
+
+        public static IEnumerable<StarSector> GetSectors()
         {
-            var list = new List<StarSystem>();
+            var list = new List<StarSector>();
 
             if (File.Exists(DataFile))
             {
                 var jsonData = File.ReadAllText(DataFile);
                 if (jsonData != "")
                 {
-                    list = JsonSerializer.Deserialize<List<StarSystem>>(jsonData)
-                        .OrderBy(s => s.Affiliation)
-                        .ThenBy(s => s.Name)
-                        .ToList();
+                    list = JsonSerializer.Deserialize<List<StarSector>>(jsonData);
                 }
             }
-            
+
             return list;
         }
 
-        public static double Distance(StarSystem star1, StarSystem star2)
+        public static StarSector GetSector(string sector)
+        {
+            return GetSectors()
+                .Where(s => s.Name == sector)
+                .FirstOrDefault();
+        }
+
+        public static IEnumerable<string> GetAffiliations(string sector)
+        {
+            return GetSector(sector).Affiliations;
+        }
+
+        public static IEnumerable<StarSystem> GetStarSystems(string sector, string affiliation = "")
+        {
+            var list = GetSector(sector).Systems;
+            if (affiliation != "")
+                list = list.Where(s => s.Affiliation == affiliation).ToList();
+            return list;
+        }
+
+        public static double Distance(Coordinates star1, Coordinates star2)
         {
             double result = 0;
 
