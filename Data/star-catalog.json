@@ -1,0 +1,342 @@
+﻿[
+  {
+    "Name": "Trèfle",
+    "Affiliations": [
+      "Agrippines",
+      "Alliance des 12 Soleils",
+      "Amas de Gion",
+      "Empire Galactique",
+      "Site remarquable"
+    ],
+    "Systems": [
+      {
+        "Name": "\u03B1 d\u0027Agrippine",
+        "Affiliation": "Agrippines",
+        "TechLevel": 5,
+        "Location": {
+          "Longitude": 75079,
+          "Latitude": 33937,
+          "Height": 4348
+        }
+      },
+      {
+        "Name": "\u03B2 d\u0027Agrippine",
+        "Affiliation": "Agrippines",
+        "TechLevel": 4,
+        "Location": {
+          "Longitude": 75024,
+          "Latitude": 33884,
+          "Height": 4278
+        }
+      },
+      {
+        "Name": "\u03B3 d\u0027Agrippine",
+        "Affiliation": "Agrippines",
+        "TechLevel": 4,
+        "Location": {
+          "Longitude": 75071,
+          "Latitude": 33786,
+          "Height": 4522
+        }
+      },
+      {
+        "Name": "\u03B4 d\u0027Agrippine",
+        "Affiliation": "Agrippines",
+        "TechLevel": 5,
+        "Location": {
+          "Longitude": 75163,
+          "Latitude": 33666,
+          "Height": 4256
+        }
+      },
+      {
+        "Name": "\u03B5 d\u0027Agrippine",
+        "Affiliation": "Agrippines",
+        "TechLevel": 4,
+        "Location": {
+          "Longitude": 75249,
+          "Latitude": 33772,
+          "Height": 4492
+        }
+      },
+      {
+        "Name": "Brazil",
+        "Affiliation": "Alliance des 12 Soleils",
+        "TechLevel": 4,
+        "Location": {
+          "Longitude": 75221,
+          "Latitude": 33316,
+          "Height": 4925
+        }
+      },
+      {
+        "Name": "Caraman",
+        "Affiliation": "Alliance des 12 Soleils",
+        "TechLevel": 4,
+        "Location": {
+          "Longitude": 75290,
+          "Latitude": 33290,
+          "Height": 4361
+        }
+      },
+      {
+        "Name": "C\u00E9ramique",
+        "Affiliation": "Alliance des 12 Soleils",
+        "TechLevel": 1,
+        "Location": {
+          "Longitude": 75632,
+          "Latitude": 33023,
+          "Height": 4107
+        }
+      },
+      {
+        "Name": "Diom\u00E8de",
+        "Affiliation": "Alliance des 12 Soleils",
+        "TechLevel": 5,
+        "Location": {
+          "Longitude": 75136,
+          "Latitude": 33130,
+          "Height": 4424
+        }
+      },
+      {
+        "Name": "Globale",
+        "Affiliation": "Alliance des 12 Soleils",
+        "TechLevel": 2,
+        "Location": {
+          "Longitude": 75736,
+          "Latitude": 33090,
+          "Height": 4142
+        }
+      },
+      {
+        "Name": "Ludio",
+        "Affiliation": "Alliance des 12 Soleils",
+        "TechLevel": 2,
+        "Location": {
+          "Longitude": 75061,
+          "Latitude": 33452,
+          "Height": 4981
+        }
+      },
+      {
+        "Name": "Macbett",
+        "Affiliation": "Alliance des 12 Soleils",
+        "TechLevel": 6,
+        "Location": {
+          "Longitude": 75519,
+          "Latitude": 33146,
+          "Height": 4942
+        }
+      },
+      {
+        "Name": "Marine",
+        "Affiliation": "Alliance des 12 Soleils",
+        "TechLevel": 2,
+        "Location": {
+          "Longitude": 75318,
+          "Latitude": 33033,
+          "Height": 4030
+        }
+      },
+      {
+        "Name": "Myrtil",
+        "Affiliation": "Alliance des 12 Soleils",
+        "TechLevel": 3,
+        "Location": {
+          "Longitude": 75173,
+          "Latitude": 33495,
+          "Height": 4538
+        }
+      },
+      {
+        "Name": "Pers\u00E9phone",
+        "Affiliation": "Alliance des 12 Soleils",
+        "TechLevel": 3,
+        "Location": {
+          "Longitude": 75429,
+          "Latitude": 33235,
+          "Height": 4919
+        }
+      },
+      {
+        "Name": "Ulysse",
+        "Affiliation": "Alliance des 12 Soleils",
+        "TechLevel": 2,
+        "Location": {
+          "Longitude": 75322,
+          "Latitude": 33431,
+          "Height": 4384
+        }
+      },
+      {
+        "Name": "Viala",
+        "Affiliation": "Alliance des 12 Soleils",
+        "TechLevel": 6,
+        "Location": {
+          "Longitude": 75336,
+          "Latitude": 33159,
+          "Height": 4610
+        }
+      },
+      {
+        "Name": "20 %",
+        "Affiliation": "Amas de Gion",
+        "TechLevel": 3,
+        "Location": {
+          "Longitude": 75964,
+          "Latitude": 33635,
+          "Height": 4974
+        }
+      },
+      {
+        "Name": "Hanlor",
+        "Affiliation": "Amas de Gion",
+        "TechLevel": 3,
+        "Location": {
+          "Longitude": 75523,
+          "Latitude": 33873,
+          "Height": 4532
+        }
+      },
+      {
+        "Name": "Katia",
+        "Affiliation": "Amas de Gion",
+        "TechLevel": 4,
+        "Location": {
+          "Longitude": 75581,
+          "Latitude": 33753,
+          "Height": 4777
+        }
+      },
+      {
+        "Name": "Kirkiss",
+        "Affiliation": "Amas de Gion",
+        "TechLevel": 3,
+        "Location": {
+          "Longitude": 75484,
+          "Latitude": 33758,
+          "Height": 4088
+        }
+      },
+      {
+        "Name": "Our",
+        "Affiliation": "Amas de Gion",
+        "TechLevel": 4,
+        "Location": {
+          "Longitude": 75786,
+          "Latitude": 33895,
+          "Height": 4788
+        }
+      },
+      {
+        "Name": "Shakra",
+        "Affiliation": "Amas de Gion",
+        "TechLevel": 4,
+        "Location": {
+          "Longitude": 75462,
+          "Latitude": 33674,
+          "Height": 4237
+        }
+      },
+      {
+        "Name": "Yjaburg",
+        "Affiliation": "Amas de Gion",
+        "TechLevel": 4,
+        "Location": {
+          "Longitude": 75602,
+          "Latitude": 33757,
+          "Height": 4075
+        }
+      },
+      {
+        "Name": "Anatolia",
+        "Affiliation": "Empire Galactique",
+        "TechLevel": 6,
+        "Location": {
+          "Longitude": 75929,
+          "Latitude": 33583,
+          "Height": 4868
+        }
+      },
+      {
+        "Name": "Cerb\u00E8re",
+        "Affiliation": "Empire Galactique",
+        "TechLevel": 2,
+        "Location": {
+          "Longitude": 75652,
+          "Latitude": 33457,
+          "Height": 4262
+        }
+      },
+      {
+        "Name": "Kharg",
+        "Affiliation": "Empire Galactique",
+        "TechLevel": 5,
+        "Location": {
+          "Longitude": 75831,
+          "Latitude": 33799,
+          "Height": 4908
+        }
+      },
+      {
+        "Name": "Styx",
+        "Affiliation": "Empire Galactique",
+        "TechLevel": 6,
+        "Location": {
+          "Longitude": 75962,
+          "Latitude": 33776,
+          "Height": 4343
+        }
+      },
+      {
+        "Name": "Tr\u00E9folia",
+        "Affiliation": "Empire Galactique",
+        "TechLevel": 6,
+        "Location": {
+          "Longitude": 75966,
+          "Latitude": 33297,
+          "Height": 4183
+        }
+      },
+      {
+        "Name": "Vonda",
+        "Affiliation": "Empire Galactique",
+        "TechLevel": 6,
+        "Location": {
+          "Longitude": 75950,
+          "Latitude": 33293,
+          "Height": 4615
+        }
+      },
+      {
+        "Name": "Garde Noir",
+        "Affiliation": "Site remarquable",
+        "TechLevel": 0,
+        "Location": {
+          "Longitude": 75645,
+          "Latitude": 33451,
+          "Height": 4257
+        }
+      }
+    ]
+  },
+  {
+    "Name": "Prima",
+    "Affiliations": [
+      "Empire Galactique"
+    ],
+    "Systems": [
+      {
+        "Name": "Prima",
+        "Affiliation": "Empire Galactique",
+        "TechLevel": 6,
+        "Location": {
+          "Longitude": 50000,
+          "Latitude": 50000,
+          "Height": 5000
+        }
+      }
+    ]
+  }
+]
