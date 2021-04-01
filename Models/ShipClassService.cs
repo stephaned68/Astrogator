@@ -14,7 +14,7 @@ namespace Astrogator.Models
         {
             get
             {
-                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Astrogator", "ship-classes.json");
+                return Path.Combine(Configuration.DataDirectory, "ship-classes.json");
             }
         }
 

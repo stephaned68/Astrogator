@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace Astrogator
 {
     public partial class MainForm : Form
     {
+
         public MainForm()
         {
             InitializeComponent();
@@ -34,6 +36,7 @@ namespace Astrogator
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            Utils.CopyData();
             AstrogatorMenuItem_Click(sender, e);
         }
 

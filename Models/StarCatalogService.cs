@@ -14,7 +14,7 @@ namespace Astrogator.Models
         {
             get
             {
-                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Astrogator", "star-catalog.json");
+                return Path.Combine(Configuration.DataDirectory, "star-catalog.json");
             }
         }
 
