@@ -1,0 +1,54 @@
+﻿[
+  {
+    "Name": "Chasseur",
+    "BaseSpeed": 40
+  },
+  {
+    "Name": "Jabo",
+    "BaseSpeed": 25
+  },
+  {
+    "Name": "Tracevide",
+    "BaseSpeed": 20
+  },
+  {
+    "Name": "Candel",
+    "BaseSpeed": 15
+  },
+  {
+    "Name": "Tabron",
+    "BaseSpeed": 12
+  },
+  {
+    "Name": "Transistel",
+    "BaseSpeed": 10
+  },
+  {
+    "Name": "Classe I",
+    "BaseSpeed": 9
+  },
+  {
+    "Name": "Classe II",
+    "BaseSpeed": 8
+  },
+  {
+    "Name": "Classe III",
+    "BaseSpeed": 7
+  },
+  {
+    "Name": "Classe IV",
+    "BaseSpeed": 6
+  },
+  {
+    "Name": "Classe V",
+    "BaseSpeed": 5
+  },
+  {
+    "Name": "Lehouine",
+    "BaseSpeed": 3
+  },
+  {
+    "Name": "Hypercom",
+    "BaseSpeed": 3000
+  }
+]
