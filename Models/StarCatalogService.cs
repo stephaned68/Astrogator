@@ -43,7 +43,10 @@ namespace Astrogator.Models
 
         public static IEnumerable<string> GetAffiliations(string sector)
         {
-            return GetSector(sector).Affiliations;
+            var list = new List<string>();
+            if (sector != null)
+                list = GetSector(sector).Affiliations;
+            return list;
         }
 
         public static IEnumerable<StarSystem> GetStarSystems(string sector, string affiliation = "")
@@ -52,6 +55,20 @@ namespace Astrogator.Models
             if (affiliation != "")
                 list = list.Where(s => s.Affiliation == affiliation).ToList();
             return list;
+        }
+
+        public static bool Persist(List<StarSector> catalog)
+        {
+            bool result = false;
+
+            try
+            {
+                var jsonData = JsonSerializer.Serialize(catalog);
+                File.WriteAllText(DataFile, jsonData);
+                result = true;
+            } catch (Exception) { }
+
+            return result;
         }
 
         public static double Distance(Coordinates star1, Coordinates star2)

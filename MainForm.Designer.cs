@@ -36,7 +36,6 @@ namespace Astrogator
             this.SectorsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AffiliationsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.ShipClassesMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StarshipsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuBar.SuspendLayout();
             this.SuspendLayout();
@@ -74,7 +73,6 @@ namespace Astrogator
             this.SectorsMenuItem,
             this.AffiliationsMenuItem,
             this.toolStripSeparator1,
-            this.ShipClassesMenuItem,
             this.StarshipsMenuItem});
             this.ParamMenuItem.Name = "ParamMenuItem";
             this.ParamMenuItem.Size = new System.Drawing.Size(88, 21);
@@ -83,32 +81,27 @@ namespace Astrogator
             // SectorsMenuItem
             // 
             this.SectorsMenuItem.Name = "SectorsMenuItem";
-            this.SectorsMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.SectorsMenuItem.Size = new System.Drawing.Size(138, 22);
             this.SectorsMenuItem.Text = "Secteurs";
             // 
             // AffiliationsMenuItem
             // 
             this.AffiliationsMenuItem.Name = "AffiliationsMenuItem";
-            this.AffiliationsMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.AffiliationsMenuItem.Size = new System.Drawing.Size(138, 22);
             this.AffiliationsMenuItem.Text = "Affiliations";
+            this.AffiliationsMenuItem.Click += new System.EventHandler(this.AffiliationsMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(196, 6);
-            // 
-            // ShipClassesMenuItem
-            // 
-            this.ShipClassesMenuItem.Name = "ShipClassesMenuItem";
-            this.ShipClassesMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.ShipClassesMenuItem.Text = "Classes de vaisseaux";
-            this.ShipClassesMenuItem.Click += new System.EventHandler(this.ShipClassesMenuItem_Click);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(135, 6);
             // 
             // StarshipsMenuItem
             // 
             this.StarshipsMenuItem.Name = "StarshipsMenuItem";
-            this.StarshipsMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.StarshipsMenuItem.Size = new System.Drawing.Size(138, 22);
             this.StarshipsMenuItem.Text = "Vaisseaux";
+            this.StarshipsMenuItem.Click += new System.EventHandler(this.StarshipsMenuItem_Click);
             // 
             // MainForm
             // 
@@ -139,7 +132,6 @@ namespace Astrogator
         private System.Windows.Forms.ToolStripMenuItem SectorsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AffiliationsMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem ShipClassesMenuItem;
         private System.Windows.Forms.ToolStripMenuItem StarshipsMenuItem;
     }
 }

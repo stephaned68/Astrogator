@@ -35,5 +35,11 @@ namespace Astrogator.Models
             
             return list;
         }
+
+        public static ShipClass GetOne(string Name)
+        {
+            var shipClass = GetAll().SingleOrDefault(c => c.Name == Name);
+            return shipClass;
+        }
     }
 }

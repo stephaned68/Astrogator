@@ -51,7 +51,7 @@ namespace Astrogator
                     .ToList();
                 foreach (var ship in ships)
                 {
-                    shipCombo.Add(new ShipComboItem { Name = ship.Name, Speed = ship.FTLSpeed });
+                    shipCombo.Add(new ShipComboItem { Name = ship.Name, Speed = ship.Speed });
                 }
             }
 

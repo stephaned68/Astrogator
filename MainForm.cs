@@ -45,9 +45,14 @@ namespace Astrogator
             SpawnForm(new AstrogatorForm());
         }
 
-        private void ShipClassesMenuItem_Click(object sender, EventArgs e)
+        private void StarshipsMenuItem_Click(object sender, EventArgs e)
         {
-            SpawnForm(new StarshipClassForm());
+            SpawnForm(new StarshipsForm());
+        }
+
+        private void AffiliationsMenuItem_Click(object sender, EventArgs e)
+        {
+            SpawnForm(new AffiliationsForm());
         }
     }
 }

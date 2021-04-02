@@ -22,6 +22,13 @@ namespace Astrogator
             }
         }
 
+        public static IEnumerable<T> DropList<T>(IEnumerable<T> list) where T : new()
+        {
+            var drop = list.ToList();
+            drop.Insert(0, new T());
+            return drop;
+        }
+
         public static void BindCombo(ComboBox combo, IEnumerable<object> dataSource, string displayProperty = "", string valueProperty = "")
         {
             combo.DisplayMember = displayProperty;

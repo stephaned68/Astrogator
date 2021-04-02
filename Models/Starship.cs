@@ -12,6 +12,6 @@ namespace Astrogator.Models
 
         public string Class { get; set; }
 
-        public int FTLSpeed { get; set; }
+        public int Speed { get; set; }
     }
 }
