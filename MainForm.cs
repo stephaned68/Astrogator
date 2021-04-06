@@ -54,5 +54,25 @@ namespace Astrogator
         {
             SpawnForm(new AffiliationsForm());
         }
+
+        private void SectorsMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CatalogMenuItem_Click(object sender, EventArgs e)
+        {
+            SpawnForm(new StarCatalogForm());
+        }
+
+        public void Notify(string text, ToolTipIcon icon = ToolTipIcon.None, int seconds = 5, string title = "")
+        {
+            FlashMessages.BalloonTipText = text;
+            FlashMessages.BalloonTipTitle = title != "" ? title : Application.ProductName;
+            if (icon != ToolTipIcon.None)
+                FlashMessages.BalloonTipIcon = icon;
+            FlashMessages.ShowBalloonTip(seconds * 1000);
+        }
+
     }
 }

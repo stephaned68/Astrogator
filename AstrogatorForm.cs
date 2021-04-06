@@ -45,13 +45,13 @@ namespace Astrogator
 
             foreach (var shipClass in ShipClassService.GetAll())
             {
-                shipCombo.Add(new ShipComboItem { Name = $"Classe : {shipClass.Name}", Speed = shipClass.BaseSpeed });
+                shipCombo.Add(new ShipComboItem { Name = $"Classe : { shipClass.Name }", Speed = shipClass.BaseSpeed });
                 var ships = StarshipService.GetAll()
                     .Where(s => s.Class == shipClass.Name)
                     .ToList();
                 foreach (var ship in ships)
                 {
-                    shipCombo.Add(new ShipComboItem { Name = ship.Name, Speed = ship.Speed });
+                    shipCombo.Add(new ShipComboItem { Name = $"-- { ship.Name }", Speed = ship.Speed });
                 }
             }
 

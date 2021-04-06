@@ -57,18 +57,21 @@ namespace Astrogator.Models
             return list;
         }
 
-        public static bool Persist(List<StarSector> catalog)
+        public static SaveResult Persist(List<StarSector> catalog)
         {
-            bool result = false;
+            var persisted = new SaveResult();
 
             try
             {
                 var jsonData = JsonSerializer.Serialize(catalog);
                 File.WriteAllText(DataFile, jsonData);
-                result = true;
-            } catch (Exception) { }
+            } catch (Exception ex) 
+            {
+                persisted.Success = false;
+                persisted.Message = ex.Message;
+            }
 
-            return result;
+            return persisted;
         }
 
         public static double Distance(Coordinates star1, Coordinates star2)

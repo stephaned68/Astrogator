@@ -14,6 +14,6 @@ namespace Astrogator.Models
 
         public Coordinates Location { get; set; }
 
-        public byte TechLevel { get; set; }
+        public int TechLevel { get; set; }
     }
 }

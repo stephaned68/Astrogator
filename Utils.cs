@@ -35,5 +35,6 @@ namespace Astrogator
             combo.ValueMember = valueProperty;
             combo.DataSource = dataSource;
         }
+
     }
 }

@@ -29,6 +29,7 @@ namespace Astrogator
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StarshipsForm));
             this.StarshipList = new System.Windows.Forms.ListView();
             this.ShipColumnHeader = new System.Windows.Forms.ColumnHeader();
             this.ClassColumnHeader = new System.Windows.Forms.ColumnHeader();
@@ -82,14 +83,16 @@ namespace Astrogator
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.ResetButton);
             this.groupBox1.Controls.Add(this.ShipSpeed);
             this.groupBox1.Controls.Add(this.ShipClassCombo);
+            this.groupBox1.Controls.Add(this.OkButton);
             this.groupBox1.Controls.Add(this.SpeedLabel);
             this.groupBox1.Controls.Add(this.ClassLabel);
             this.groupBox1.Controls.Add(this.ShipName);
             this.groupBox1.Location = new System.Drawing.Point(3, 254);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(310, 104);
+            this.groupBox1.Size = new System.Drawing.Size(399, 104);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Vaisseau :";
@@ -139,7 +142,7 @@ namespace Astrogator
             // 
             // OkButton
             // 
-            this.OkButton.Location = new System.Drawing.Point(319, 263);
+            this.OkButton.Location = new System.Drawing.Point(318, 21);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(75, 23);
             this.OkButton.TabIndex = 4;
@@ -149,7 +152,7 @@ namespace Astrogator
             // 
             // ResetButton
             // 
-            this.ResetButton.Location = new System.Drawing.Point(319, 292);
+            this.ResetButton.Location = new System.Drawing.Point(318, 50);
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.Size = new System.Drawing.Size(75, 23);
             this.ResetButton.TabIndex = 5;
@@ -161,14 +164,13 @@ namespace Astrogator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(402, 359);
-            this.Controls.Add(this.ResetButton);
+            this.ClientSize = new System.Drawing.Size(404, 359);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.OkButton);
             this.Controls.Add(this.StarshipList);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StarshipsForm";
-            this.Text = "StarshipsForm";
+            this.Text = "Vaisseaux";
             this.Load += new System.EventHandler(this.StarshipsForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

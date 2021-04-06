@@ -43,22 +43,25 @@ namespace Astrogator.Models
             return ship;
         }
 
-        private static bool WriteFile(List<Starship> list)
+        private static SaveResult WriteFile(List<Starship> list)
         {
-            bool result = false;
+            var result = new SaveResult();
 
             try
             {
                 var jsonData = JsonSerializer.Serialize(list);
                 File.WriteAllText(DataFile, jsonData);
-                result = true;
             }
-            catch (Exception) { }
+            catch (Exception ex) 
+            {
+                result.Success = false;
+                result.Message = ex.Message;
+            }
 
             return result;
         }
 
-        public static bool Insert(Starship ship)
+        public static SaveResult Insert(Starship ship)
         {
             // Add to list
             List<Starship> list = (List<Starship>)GetAll();
@@ -67,7 +70,7 @@ namespace Astrogator.Models
             return WriteFile(list);
         }
 
-        public static bool Update(Starship ship)
+        public static SaveResult Update(Starship ship)
         {
             // Update list
             List<Starship> list = (List<Starship>)GetAll();

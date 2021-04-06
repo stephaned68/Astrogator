@@ -13,6 +13,8 @@ namespace Astrogator
 {
     public partial class StarshipsForm : Form
     {
+        private MainForm mainForm;
+
         private bool editMode;
 
         public StarshipsForm()
@@ -48,6 +50,8 @@ namespace Astrogator
 
         private void StarshipsForm_Load(object sender, EventArgs e)
         {
+            mainForm = (MainForm)MdiParent;
+
             LoadData();
             Utils.BindCombo(ShipClassCombo, Utils.DropList(ShipClassService.GetAll()),"Name", "Name");
         }
@@ -61,16 +65,26 @@ namespace Astrogator
                 Speed = (int)ShipSpeed.Value
             };
 
+            SaveResult saved;
             if (editMode)
             {
-                StarshipService.Update(ship);
+                saved = StarshipService.Update(ship);
             } 
             else
             {
-                StarshipService.Insert(ship);
+                saved = StarshipService.Insert(ship);
             }
-            LoadData();
-            ResetButton_Click(sender, e);
+
+            if (!saved.Success)
+            {
+                mainForm.Notify(saved.Message, ToolTipIcon.Warning);
+            }
+            else
+            {
+                mainForm.Notify("Liste des vaisseaux enregistrées avec succès", ToolTipIcon.Info);
+                LoadData();
+                ResetButton_Click(sender, e);
+            }
         }
 
         private void ResetButton_Click(object sender, EventArgs e)

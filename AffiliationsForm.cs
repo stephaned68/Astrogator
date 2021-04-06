@@ -13,6 +13,8 @@ namespace Astrogator
 {
     public partial class AffiliationsForm : Form
     {
+        private MainForm mainForm;
+
         public AffiliationsForm()
         {
             InitializeComponent();
@@ -20,6 +22,7 @@ namespace Astrogator
 
         private void AffiliationsForm_Load(object sender, EventArgs e)
         {
+            mainForm = (MainForm)MdiParent;
             Utils.BindCombo(SectorCombo, Utils.DropList(StarCatalogService.GetSectors()), "Name");
         }
 
@@ -40,7 +43,11 @@ namespace Astrogator
             var sector = catalog.SingleOrDefault(s => s.Name == selected.Name);
             sector.Affiliations = Affiliations.Lines.ToList();
 
-            StarCatalogService.Persist(catalog);
+            var persisted = StarCatalogService.Persist(catalog);
+            mainForm.Notify(
+                persisted.Success ? $"Liste des affiliations sauvegardées avec succès" : persisted.Message,
+                persisted.Success ? ToolTipIcon.Info : ToolTipIcon.Warning
+                );
         }
 
         private void CloseButton_Click(object sender, EventArgs e)

@@ -29,6 +29,8 @@ namespace Astrogator
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MenuBar = new System.Windows.Forms.MenuStrip();
             this.AstrogatorMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CatalogMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,6 +39,7 @@ namespace Astrogator
             this.AffiliationsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.StarshipsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FlashMessages = new System.Windows.Forms.NotifyIcon(this.components);
             this.MenuBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +69,7 @@ namespace Astrogator
             this.CatalogMenuItem.Name = "CatalogMenuItem";
             this.CatalogMenuItem.Size = new System.Drawing.Size(84, 21);
             this.CatalogMenuItem.Text = "Catalogue";
+            this.CatalogMenuItem.Click += new System.EventHandler(this.CatalogMenuItem_Click);
             // 
             // ParamMenuItem
             // 
@@ -83,6 +87,7 @@ namespace Astrogator
             this.SectorsMenuItem.Name = "SectorsMenuItem";
             this.SectorsMenuItem.Size = new System.Drawing.Size(138, 22);
             this.SectorsMenuItem.Text = "Secteurs";
+            this.SectorsMenuItem.Click += new System.EventHandler(this.SectorsMenuItem_Click);
             // 
             // AffiliationsMenuItem
             // 
@@ -103,12 +108,18 @@ namespace Astrogator
             this.StarshipsMenuItem.Text = "Vaisseaux";
             this.StarshipsMenuItem.Click += new System.EventHandler(this.StarshipsMenuItem_Click);
             // 
+            // FlashMessages
+            // 
+            this.FlashMessages.Icon = ((System.Drawing.Icon)(resources.GetObject("FlashMessages.Icon")));
+            this.FlashMessages.Visible = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.MenuBar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.MenuBar;
             this.Name = "MainForm";
@@ -133,5 +144,6 @@ namespace Astrogator
         private System.Windows.Forms.ToolStripMenuItem AffiliationsMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem StarshipsMenuItem;
+        private System.Windows.Forms.NotifyIcon FlashMessages;
     }
 }
