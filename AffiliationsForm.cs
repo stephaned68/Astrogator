@@ -50,6 +50,39 @@ namespace Astrogator
                 );
         }
 
+        private void SectorCombo_Leave(object sender, EventArgs e)
+        {
+            var sectorName = SectorCombo.Text;
+            var exists = SectorCombo.FindString(sectorName) >= 0;
+            if (!exists)
+            {
+                var resp = MessageBox.Show(
+                    $"Voulez-vous ajouter le secteur {sectorName} au catalogue ?",
+                    Application.ProductName,
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                    );
+                if (resp == DialogResult.Yes)
+                {
+                    var sector = new StarSector
+                    {
+                        Name = sectorName,
+                        Affiliations = new List<string>(),
+                        Systems = new List<StarSystem>()
+                    };
+
+                    var catalog = StarCatalogService.GetSectors().ToList();
+                    catalog.Add(sector);
+                    var result = StarCatalogService.Persist(catalog);
+                    if (result.Success)
+                    {
+                        AffiliationsForm_Load(sender, e);
+                        SectorCombo.SelectedIndex = SectorCombo.FindString(sectorName);
+                    }
+                }
+            }
+        }
+
         private void CloseButton_Click(object sender, EventArgs e)
         {
             this.Close();

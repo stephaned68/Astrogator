@@ -49,7 +49,7 @@ namespace Astrogator.Models
 
             try
             {
-                var jsonData = JsonSerializer.Serialize(list);
+                var jsonData = JsonSerializer.Serialize(list, new JsonSerializerOptions { WriteIndented = true });
                 File.WriteAllText(DataFile, jsonData);
             }
             catch (Exception ex) 

@@ -35,13 +35,13 @@ namespace Astrogator
             this.ClassColumnHeader = new System.Windows.Forms.ColumnHeader();
             this.SpeedColumnHeader = new System.Windows.Forms.ColumnHeader();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ResetButton = new System.Windows.Forms.Button();
             this.ShipSpeed = new System.Windows.Forms.NumericUpDown();
             this.ShipClassCombo = new System.Windows.Forms.ComboBox();
+            this.OkButton = new System.Windows.Forms.Button();
             this.SpeedLabel = new System.Windows.Forms.Label();
             this.ClassLabel = new System.Windows.Forms.Label();
             this.ShipName = new System.Windows.Forms.TextBox();
-            this.OkButton = new System.Windows.Forms.Button();
-            this.ResetButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ShipSpeed)).BeginInit();
             this.SuspendLayout();
@@ -56,10 +56,11 @@ namespace Astrogator
             this.StarshipList.GridLines = true;
             this.StarshipList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.StarshipList.HideSelection = false;
-            this.StarshipList.Location = new System.Drawing.Point(3, 0);
+            this.StarshipList.Location = new System.Drawing.Point(4, 0);
+            this.StarshipList.Margin = new System.Windows.Forms.Padding(4);
             this.StarshipList.MultiSelect = false;
             this.StarshipList.Name = "StarshipList";
-            this.StarshipList.Size = new System.Drawing.Size(399, 248);
+            this.StarshipList.Size = new System.Drawing.Size(512, 291);
             this.StarshipList.TabIndex = 0;
             this.StarshipList.UseCompatibleStateImageBehavior = false;
             this.StarshipList.View = System.Windows.Forms.View.Details;
@@ -90,86 +91,96 @@ namespace Astrogator
             this.groupBox1.Controls.Add(this.SpeedLabel);
             this.groupBox1.Controls.Add(this.ClassLabel);
             this.groupBox1.Controls.Add(this.ShipName);
-            this.groupBox1.Location = new System.Drawing.Point(3, 254);
+            this.groupBox1.Location = new System.Drawing.Point(4, 299);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(399, 104);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(513, 122);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Vaisseau :";
             // 
+            // ResetButton
+            // 
+            this.ResetButton.Location = new System.Drawing.Point(409, 59);
+            this.ResetButton.Margin = new System.Windows.Forms.Padding(4);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(96, 27);
+            this.ResetButton.TabIndex = 5;
+            this.ResetButton.Text = "Annuler";
+            this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
+            // 
             // ShipSpeed
             // 
-            this.ShipSpeed.Location = new System.Drawing.Point(184, 67);
+            this.ShipSpeed.Location = new System.Drawing.Point(237, 79);
+            this.ShipSpeed.Margin = new System.Windows.Forms.Padding(4);
             this.ShipSpeed.Name = "ShipSpeed";
-            this.ShipSpeed.Size = new System.Drawing.Size(120, 22);
+            this.ShipSpeed.Size = new System.Drawing.Size(154, 26);
             this.ShipSpeed.TabIndex = 3;
             this.ShipSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // ShipClassCombo
             // 
             this.ShipClassCombo.FormattingEnabled = true;
-            this.ShipClassCombo.Location = new System.Drawing.Point(6, 66);
+            this.ShipClassCombo.Location = new System.Drawing.Point(8, 78);
+            this.ShipClassCombo.Margin = new System.Windows.Forms.Padding(4);
             this.ShipClassCombo.Name = "ShipClassCombo";
-            this.ShipClassCombo.Size = new System.Drawing.Size(172, 25);
+            this.ShipClassCombo.Size = new System.Drawing.Size(220, 28);
             this.ShipClassCombo.TabIndex = 2;
             this.ShipClassCombo.SelectedIndexChanged += new System.EventHandler(this.ShipClassCombo_SelectedIndexChanged);
+            // 
+            // OkButton
+            // 
+            this.OkButton.Location = new System.Drawing.Point(409, 25);
+            this.OkButton.Margin = new System.Windows.Forms.Padding(4);
+            this.OkButton.Name = "OkButton";
+            this.OkButton.Size = new System.Drawing.Size(96, 27);
+            this.OkButton.TabIndex = 4;
+            this.OkButton.Text = "Ok";
+            this.OkButton.UseVisualStyleBackColor = true;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
             // SpeedLabel
             // 
             this.SpeedLabel.AutoSize = true;
-            this.SpeedLabel.Location = new System.Drawing.Point(193, 46);
+            this.SpeedLabel.Location = new System.Drawing.Point(248, 54);
+            this.SpeedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SpeedLabel.Name = "SpeedLabel";
-            this.SpeedLabel.Size = new System.Drawing.Size(102, 17);
+            this.SpeedLabel.Size = new System.Drawing.Size(124, 20);
             this.SpeedLabel.TabIndex = 2;
             this.SpeedLabel.Text = "Vitesse (EAL/h) :";
             // 
             // ClassLabel
             // 
             this.ClassLabel.AutoSize = true;
-            this.ClassLabel.Location = new System.Drawing.Point(6, 46);
+            this.ClassLabel.Location = new System.Drawing.Point(8, 54);
+            this.ClassLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ClassLabel.Name = "ClassLabel";
-            this.ClassLabel.Size = new System.Drawing.Size(52, 17);
+            this.ClassLabel.Size = new System.Drawing.Size(64, 20);
             this.ClassLabel.TabIndex = 1;
             this.ClassLabel.Text = "Classe :";
             // 
             // ShipName
             // 
-            this.ShipName.Location = new System.Drawing.Point(6, 21);
+            this.ShipName.Location = new System.Drawing.Point(8, 25);
+            this.ShipName.Margin = new System.Windows.Forms.Padding(4);
             this.ShipName.Name = "ShipName";
             this.ShipName.PlaceholderText = "Nom du vaisseau";
-            this.ShipName.Size = new System.Drawing.Size(298, 22);
+            this.ShipName.Size = new System.Drawing.Size(382, 26);
             this.ShipName.TabIndex = 0;
-            // 
-            // OkButton
-            // 
-            this.OkButton.Location = new System.Drawing.Point(318, 21);
-            this.OkButton.Name = "OkButton";
-            this.OkButton.Size = new System.Drawing.Size(75, 23);
-            this.OkButton.TabIndex = 4;
-            this.OkButton.Text = "Ok";
-            this.OkButton.UseVisualStyleBackColor = true;
-            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
-            // 
-            // ResetButton
-            // 
-            this.ResetButton.Location = new System.Drawing.Point(318, 50);
-            this.ResetButton.Name = "ResetButton";
-            this.ResetButton.Size = new System.Drawing.Size(75, 23);
-            this.ResetButton.TabIndex = 5;
-            this.ResetButton.Text = "Annuler";
-            this.ResetButton.UseVisualStyleBackColor = true;
-            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // StarshipsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 359);
+            this.ClientSize = new System.Drawing.Size(521, 426);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.StarshipList);
-            this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StarshipsForm";
+            this.ShowIcon = false;
             this.Text = "Vaisseaux";
             this.Load += new System.EventHandler(this.StarshipsForm_Load);
             this.groupBox1.ResumeLayout(false);

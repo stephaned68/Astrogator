@@ -10,6 +10,7 @@ namespace Astrogator
 {
     public class Utils
     {
+
         public static void CopyData()
         {
             if (!Directory.Exists(Configuration.DataDirectory))
@@ -36,5 +37,28 @@ namespace Astrogator
             combo.DataSource = dataSource;
         }
 
+        public static DialogResult Alert(string message, MessageBoxIcon icon = MessageBoxIcon.Warning)
+        {
+            return MessageBox.Show(
+                message,
+                Application.ProductName,
+                MessageBoxButtons.OK,
+                icon
+                );
+        }
+
+        public static DialogResult Confirm(
+            string message, 
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo, 
+            MessageBoxIcon icon = MessageBoxIcon.Question
+            )
+        {
+            return MessageBox.Show(
+                message,
+                Application.ProductName,
+                buttons,
+                icon
+                );
+        }
     }
 }
