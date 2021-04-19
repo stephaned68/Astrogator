@@ -48,14 +48,14 @@ namespace Astrogator
             // 
             // toolStrip1
             // 
-            this.toolStrip1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.toolStrip1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SectorsToolstripDropList,
             this.toolStripSeparator,
             this.SaveToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1007, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1007, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -65,14 +65,14 @@ namespace Astrogator
             this.SectorsToolstripDropList.Image = ((System.Drawing.Image)(resources.GetObject("SectorsToolstripDropList.Image")));
             this.SectorsToolstripDropList.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.SectorsToolstripDropList.Name = "SectorsToolstripDropList";
-            this.SectorsToolstripDropList.Size = new System.Drawing.Size(84, 24);
+            this.SectorsToolstripDropList.Size = new System.Drawing.Size(73, 22);
             this.SectorsToolstripDropList.Text = "Secteurs";
             this.SectorsToolstripDropList.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.SectorsToolstripDropList_DropDownItemClicked);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
             // 
             // SaveToolStripButton
             // 
@@ -80,7 +80,7 @@ namespace Astrogator
             this.SaveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("SaveToolStripButton.Image")));
             this.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.SaveToolStripButton.Name = "SaveToolStripButton";
-            this.SaveToolStripButton.Size = new System.Drawing.Size(23, 24);
+            this.SaveToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.SaveToolStripButton.Text = "&Sauvegarder";
             this.SaveToolStripButton.Click += new System.EventHandler(this.SaveToolStripButton_Click);
             // 
@@ -95,11 +95,11 @@ namespace Astrogator
             this.SectorGridAffiliationCol,
             this.SectorGridTLCol});
             this.SectorGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SectorGrid.Location = new System.Drawing.Point(0, 27);
-            this.SectorGrid.Margin = new System.Windows.Forms.Padding(4);
+            this.SectorGrid.Location = new System.Drawing.Point(0, 25);
+            this.SectorGrid.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.SectorGrid.Name = "SectorGrid";
             this.SectorGrid.RowTemplate.Height = 25;
-            this.SectorGrid.Size = new System.Drawing.Size(1007, 492);
+            this.SectorGrid.Size = new System.Drawing.Size(1007, 494);
             this.SectorGrid.TabIndex = 1;
             this.SectorGrid.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.SectorGrid_DataError);
             // 
@@ -152,12 +152,12 @@ namespace Astrogator
             // 
             // StarCatalogForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1007, 519);
             this.Controls.Add(this.SectorGrid);
             this.Controls.Add(this.toolStrip1);
-            this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "StarCatalogForm";
             this.ShowIcon = false;
             this.Text = "Catalogue Stellaire";

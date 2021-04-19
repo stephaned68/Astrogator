@@ -73,64 +73,64 @@ namespace Astrogator
             // DepSystemCombo
             // 
             this.DepSystemCombo.FormattingEnabled = true;
-            this.DepSystemCombo.Location = new System.Drawing.Point(8, 61);
-            this.DepSystemCombo.Margin = new System.Windows.Forms.Padding(4);
+            this.DepSystemCombo.Location = new System.Drawing.Point(7, 52);
+            this.DepSystemCombo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DepSystemCombo.Name = "DepSystemCombo";
-            this.DepSystemCombo.Size = new System.Drawing.Size(269, 28);
+            this.DepSystemCombo.Size = new System.Drawing.Size(240, 25);
             this.DepSystemCombo.TabIndex = 1;
             this.DepSystemCombo.SelectedIndexChanged += new System.EventHandler(this.DepartureCombo_SelectedIndexChanged);
             // 
             // depLongitudeLabel
             // 
             this.depLongitudeLabel.AutoSize = true;
-            this.depLongitudeLabel.Location = new System.Drawing.Point(287, 36);
+            this.depLongitudeLabel.Location = new System.Drawing.Point(255, 31);
             this.depLongitudeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.depLongitudeLabel.Name = "depLongitudeLabel";
-            this.depLongitudeLabel.Size = new System.Drawing.Size(90, 20);
+            this.depLongitudeLabel.Size = new System.Drawing.Size(81, 17);
             this.depLongitudeLabel.TabIndex = 2;
             this.depLongitudeLabel.Text = "Longitude :";
             // 
             // DepLongitude
             // 
-            this.DepLongitude.Location = new System.Drawing.Point(287, 61);
-            this.DepLongitude.Margin = new System.Windows.Forms.Padding(4);
+            this.DepLongitude.Location = new System.Drawing.Point(255, 52);
+            this.DepLongitude.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DepLongitude.Name = "DepLongitude";
-            this.DepLongitude.Size = new System.Drawing.Size(127, 26);
+            this.DepLongitude.Size = new System.Drawing.Size(113, 23);
             this.DepLongitude.TabIndex = 3;
             // 
             // DepLatitude
             // 
-            this.DepLatitude.Location = new System.Drawing.Point(424, 61);
-            this.DepLatitude.Margin = new System.Windows.Forms.Padding(4);
+            this.DepLatitude.Location = new System.Drawing.Point(377, 52);
+            this.DepLatitude.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DepLatitude.Name = "DepLatitude";
-            this.DepLatitude.Size = new System.Drawing.Size(127, 26);
+            this.DepLatitude.Size = new System.Drawing.Size(113, 23);
             this.DepLatitude.TabIndex = 4;
             // 
             // depLatitudeLabel
             // 
             this.depLatitudeLabel.AutoSize = true;
-            this.depLatitudeLabel.Location = new System.Drawing.Point(424, 36);
+            this.depLatitudeLabel.Location = new System.Drawing.Point(377, 31);
             this.depLatitudeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.depLatitudeLabel.Name = "depLatitudeLabel";
-            this.depLatitudeLabel.Size = new System.Drawing.Size(76, 20);
+            this.depLatitudeLabel.Size = new System.Drawing.Size(69, 17);
             this.depLatitudeLabel.TabIndex = 5;
             this.depLatitudeLabel.Text = "Latitude :";
             // 
             // DepHeight
             // 
-            this.DepHeight.Location = new System.Drawing.Point(562, 61);
-            this.DepHeight.Margin = new System.Windows.Forms.Padding(4);
+            this.DepHeight.Location = new System.Drawing.Point(500, 52);
+            this.DepHeight.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DepHeight.Name = "DepHeight";
-            this.DepHeight.Size = new System.Drawing.Size(127, 26);
+            this.DepHeight.Size = new System.Drawing.Size(113, 23);
             this.DepHeight.TabIndex = 6;
             // 
             // depHeightLabel
             // 
             this.depHeightLabel.AutoSize = true;
-            this.depHeightLabel.Location = new System.Drawing.Point(562, 36);
+            this.depHeightLabel.Location = new System.Drawing.Point(500, 31);
             this.depHeightLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.depHeightLabel.Name = "depHeightLabel";
-            this.depHeightLabel.Size = new System.Drawing.Size(75, 20);
+            this.depHeightLabel.Size = new System.Drawing.Size(67, 17);
             this.depHeightLabel.TabIndex = 7;
             this.depHeightLabel.Text = "Hauteur :";
             // 
@@ -144,11 +144,11 @@ namespace Astrogator
             this.departureGroup.Controls.Add(this.DepLongitude);
             this.departureGroup.Controls.Add(this.depLatitudeLabel);
             this.departureGroup.Controls.Add(this.DepLatitude);
-            this.departureGroup.Location = new System.Drawing.Point(1, 14);
-            this.departureGroup.Margin = new System.Windows.Forms.Padding(4);
+            this.departureGroup.Location = new System.Drawing.Point(1, 12);
+            this.departureGroup.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.departureGroup.Name = "departureGroup";
-            this.departureGroup.Padding = new System.Windows.Forms.Padding(4);
-            this.departureGroup.Size = new System.Drawing.Size(705, 104);
+            this.departureGroup.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.departureGroup.Size = new System.Drawing.Size(627, 88);
             this.departureGroup.TabIndex = 8;
             this.departureGroup.TabStop = false;
             this.departureGroup.Text = "Départ :";
@@ -156,10 +156,10 @@ namespace Astrogator
             // DepSectorCombo
             // 
             this.DepSectorCombo.FormattingEnabled = true;
-            this.DepSectorCombo.Location = new System.Drawing.Point(8, 25);
-            this.DepSectorCombo.Margin = new System.Windows.Forms.Padding(4);
+            this.DepSectorCombo.Location = new System.Drawing.Point(7, 21);
+            this.DepSectorCombo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DepSectorCombo.Name = "DepSectorCombo";
-            this.DepSectorCombo.Size = new System.Drawing.Size(269, 28);
+            this.DepSectorCombo.Size = new System.Drawing.Size(240, 25);
             this.DepSectorCombo.TabIndex = 8;
             this.DepSectorCombo.SelectedIndexChanged += new System.EventHandler(this.DepSectorCombo_SelectedIndexChanged);
             // 
@@ -173,11 +173,11 @@ namespace Astrogator
             this.arrivalGroup.Controls.Add(this.ArrLongitude);
             this.arrivalGroup.Controls.Add(this.arrLatitudeLabel);
             this.arrivalGroup.Controls.Add(this.ArrLatitude);
-            this.arrivalGroup.Location = new System.Drawing.Point(1, 125);
-            this.arrivalGroup.Margin = new System.Windows.Forms.Padding(4);
+            this.arrivalGroup.Location = new System.Drawing.Point(1, 106);
+            this.arrivalGroup.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.arrivalGroup.Name = "arrivalGroup";
-            this.arrivalGroup.Padding = new System.Windows.Forms.Padding(4);
-            this.arrivalGroup.Size = new System.Drawing.Size(705, 102);
+            this.arrivalGroup.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.arrivalGroup.Size = new System.Drawing.Size(627, 87);
             this.arrivalGroup.TabIndex = 9;
             this.arrivalGroup.TabStop = false;
             this.arrivalGroup.Text = "Arrivée";
@@ -185,84 +185,84 @@ namespace Astrogator
             // ArrSectorCombo
             // 
             this.ArrSectorCombo.FormattingEnabled = true;
-            this.ArrSectorCombo.Location = new System.Drawing.Point(8, 25);
-            this.ArrSectorCombo.Margin = new System.Windows.Forms.Padding(4);
+            this.ArrSectorCombo.Location = new System.Drawing.Point(7, 21);
+            this.ArrSectorCombo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ArrSectorCombo.Name = "ArrSectorCombo";
-            this.ArrSectorCombo.Size = new System.Drawing.Size(269, 28);
+            this.ArrSectorCombo.Size = new System.Drawing.Size(240, 25);
             this.ArrSectorCombo.TabIndex = 9;
             this.ArrSectorCombo.SelectedIndexChanged += new System.EventHandler(this.ArrSectorCombo_SelectedIndexChanged);
             // 
             // ArrSystemCombo
             // 
             this.ArrSystemCombo.FormattingEnabled = true;
-            this.ArrSystemCombo.Location = new System.Drawing.Point(8, 61);
-            this.ArrSystemCombo.Margin = new System.Windows.Forms.Padding(4);
+            this.ArrSystemCombo.Location = new System.Drawing.Point(7, 52);
+            this.ArrSystemCombo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ArrSystemCombo.Name = "ArrSystemCombo";
-            this.ArrSystemCombo.Size = new System.Drawing.Size(269, 28);
+            this.ArrSystemCombo.Size = new System.Drawing.Size(240, 25);
             this.ArrSystemCombo.TabIndex = 1;
             this.ArrSystemCombo.SelectedIndexChanged += new System.EventHandler(this.ArrivalCombo_SelectedIndexChanged);
             // 
             // arrHeightLabel
             // 
             this.arrHeightLabel.AutoSize = true;
-            this.arrHeightLabel.Location = new System.Drawing.Point(562, 36);
+            this.arrHeightLabel.Location = new System.Drawing.Point(500, 31);
             this.arrHeightLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.arrHeightLabel.Name = "arrHeightLabel";
-            this.arrHeightLabel.Size = new System.Drawing.Size(75, 20);
+            this.arrHeightLabel.Size = new System.Drawing.Size(67, 17);
             this.arrHeightLabel.TabIndex = 7;
             this.arrHeightLabel.Text = "Hauteur :";
             // 
             // arrLongitudeLabel
             // 
             this.arrLongitudeLabel.AutoSize = true;
-            this.arrLongitudeLabel.Location = new System.Drawing.Point(287, 36);
+            this.arrLongitudeLabel.Location = new System.Drawing.Point(255, 31);
             this.arrLongitudeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.arrLongitudeLabel.Name = "arrLongitudeLabel";
-            this.arrLongitudeLabel.Size = new System.Drawing.Size(90, 20);
+            this.arrLongitudeLabel.Size = new System.Drawing.Size(81, 17);
             this.arrLongitudeLabel.TabIndex = 2;
             this.arrLongitudeLabel.Text = "Longitude :";
             // 
             // ArrHeight
             // 
-            this.ArrHeight.Location = new System.Drawing.Point(562, 61);
-            this.ArrHeight.Margin = new System.Windows.Forms.Padding(4);
+            this.ArrHeight.Location = new System.Drawing.Point(500, 52);
+            this.ArrHeight.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ArrHeight.Name = "ArrHeight";
-            this.ArrHeight.Size = new System.Drawing.Size(127, 26);
+            this.ArrHeight.Size = new System.Drawing.Size(113, 23);
             this.ArrHeight.TabIndex = 6;
             // 
             // ArrLongitude
             // 
-            this.ArrLongitude.Location = new System.Drawing.Point(287, 61);
-            this.ArrLongitude.Margin = new System.Windows.Forms.Padding(4);
+            this.ArrLongitude.Location = new System.Drawing.Point(255, 52);
+            this.ArrLongitude.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ArrLongitude.Name = "ArrLongitude";
-            this.ArrLongitude.Size = new System.Drawing.Size(127, 26);
+            this.ArrLongitude.Size = new System.Drawing.Size(113, 23);
             this.ArrLongitude.TabIndex = 3;
             // 
             // arrLatitudeLabel
             // 
             this.arrLatitudeLabel.AutoSize = true;
-            this.arrLatitudeLabel.Location = new System.Drawing.Point(424, 36);
+            this.arrLatitudeLabel.Location = new System.Drawing.Point(377, 31);
             this.arrLatitudeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.arrLatitudeLabel.Name = "arrLatitudeLabel";
-            this.arrLatitudeLabel.Size = new System.Drawing.Size(76, 20);
+            this.arrLatitudeLabel.Size = new System.Drawing.Size(69, 17);
             this.arrLatitudeLabel.TabIndex = 5;
             this.arrLatitudeLabel.Text = "Latitude :";
             // 
             // ArrLatitude
             // 
-            this.ArrLatitude.Location = new System.Drawing.Point(424, 61);
-            this.ArrLatitude.Margin = new System.Windows.Forms.Padding(4);
+            this.ArrLatitude.Location = new System.Drawing.Point(377, 52);
+            this.ArrLatitude.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ArrLatitude.Name = "ArrLatitude";
-            this.ArrLatitude.Size = new System.Drawing.Size(127, 26);
+            this.ArrLatitude.Size = new System.Drawing.Size(113, 23);
             this.ArrLatitude.TabIndex = 4;
             // 
             // CalculateButton
             // 
             this.CalculateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CalculateButton.Location = new System.Drawing.Point(558, 60);
-            this.CalculateButton.Margin = new System.Windows.Forms.Padding(4);
+            this.CalculateButton.Location = new System.Drawing.Point(496, 51);
+            this.CalculateButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.CalculateButton.Name = "CalculateButton";
-            this.CalculateButton.Size = new System.Drawing.Size(139, 33);
+            this.CalculateButton.Size = new System.Drawing.Size(124, 28);
             this.CalculateButton.TabIndex = 11;
             this.CalculateButton.Text = "Calcul";
             this.CalculateButton.UseVisualStyleBackColor = true;
@@ -280,11 +280,11 @@ namespace Astrogator
             this.StarshipGroup.Controls.Add(this.StarshipSpeed);
             this.StarshipGroup.Controls.Add(this.StarshipSpeedLabel);
             this.StarshipGroup.Controls.Add(this.StarshipCombo);
-            this.StarshipGroup.Location = new System.Drawing.Point(1, 234);
-            this.StarshipGroup.Margin = new System.Windows.Forms.Padding(4);
+            this.StarshipGroup.Location = new System.Drawing.Point(1, 199);
+            this.StarshipGroup.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.StarshipGroup.Name = "StarshipGroup";
-            this.StarshipGroup.Padding = new System.Windows.Forms.Padding(4);
-            this.StarshipGroup.Size = new System.Drawing.Size(705, 101);
+            this.StarshipGroup.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.StarshipGroup.Size = new System.Drawing.Size(627, 86);
             this.StarshipGroup.TabIndex = 12;
             this.StarshipGroup.TabStop = false;
             this.StarshipGroup.Text = "Vaisseau";
@@ -297,9 +297,9 @@ namespace Astrogator
             0,
             0,
             65536});
-            this.Detour.Location = new System.Drawing.Point(424, 64);
+            this.Detour.Location = new System.Drawing.Point(377, 54);
             this.Detour.Name = "Detour";
-            this.Detour.Size = new System.Drawing.Size(68, 26);
+            this.Detour.Size = new System.Drawing.Size(60, 23);
             this.Detour.TabIndex = 16;
             this.Detour.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Detour.Value = new decimal(new int[] {
@@ -311,9 +311,9 @@ namespace Astrogator
             // DetourCheckbox
             // 
             this.DetourCheckbox.AutoSize = true;
-            this.DetourCheckbox.Location = new System.Drawing.Point(336, 65);
+            this.DetourCheckbox.Location = new System.Drawing.Point(299, 55);
             this.DetourCheckbox.Name = "DetourCheckbox";
-            this.DetourCheckbox.Size = new System.Drawing.Size(82, 24);
+            this.DetourCheckbox.Size = new System.Drawing.Size(75, 21);
             this.DetourCheckbox.TabIndex = 15;
             this.DetourCheckbox.Text = "Détour ";
             this.DetourCheckbox.UseVisualStyleBackColor = true;
@@ -327,9 +327,9 @@ namespace Astrogator
             0,
             0,
             65536});
-            this.UnknownRoute.Location = new System.Drawing.Point(209, 64);
+            this.UnknownRoute.Location = new System.Drawing.Point(186, 54);
             this.UnknownRoute.Name = "UnknownRoute";
-            this.UnknownRoute.Size = new System.Drawing.Size(68, 26);
+            this.UnknownRoute.Size = new System.Drawing.Size(60, 23);
             this.UnknownRoute.TabIndex = 14;
             this.UnknownRoute.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.UnknownRoute.Value = new decimal(new int[] {
@@ -341,9 +341,9 @@ namespace Astrogator
             // UnknownRouteCheckbox
             // 
             this.UnknownRouteCheckbox.AutoSize = true;
-            this.UnknownRouteCheckbox.Location = new System.Drawing.Point(11, 65);
+            this.UnknownRouteCheckbox.Location = new System.Drawing.Point(10, 55);
             this.UnknownRouteCheckbox.Name = "UnknownRouteCheckbox";
-            this.UnknownRouteCheckbox.Size = new System.Drawing.Size(144, 24);
+            this.UnknownRouteCheckbox.Size = new System.Drawing.Size(129, 21);
             this.UnknownRouteCheckbox.TabIndex = 13;
             this.UnknownRouteCheckbox.Text = "Route inconnue";
             this.UnknownRouteCheckbox.UseVisualStyleBackColor = true;
@@ -352,23 +352,23 @@ namespace Astrogator
             // CreditLabel
             // 
             this.CreditLabel.AutoSize = true;
-            this.CreditLabel.Location = new System.Drawing.Point(530, 28);
+            this.CreditLabel.Location = new System.Drawing.Point(471, 24);
             this.CreditLabel.Name = "CreditLabel";
-            this.CreditLabel.Size = new System.Drawing.Size(30, 20);
+            this.CreditLabel.Size = new System.Drawing.Size(27, 17);
             this.CreditLabel.TabIndex = 12;
             this.CreditLabel.Text = "Cr.";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(424, 25);
+            this.textBox1.Location = new System.Drawing.Point(377, 21);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.Size = new System.Drawing.Size(89, 23);
             this.textBox1.TabIndex = 7;
             // 
             // StarshipSpeed
             // 
-            this.StarshipSpeed.Location = new System.Drawing.Point(285, 26);
-            this.StarshipSpeed.Margin = new System.Windows.Forms.Padding(4);
+            this.StarshipSpeed.Location = new System.Drawing.Point(253, 22);
+            this.StarshipSpeed.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.StarshipSpeed.Maximum = new decimal(new int[] {
             3000,
             0,
@@ -380,7 +380,7 @@ namespace Astrogator
             0,
             0});
             this.StarshipSpeed.Name = "StarshipSpeed";
-            this.StarshipSpeed.Size = new System.Drawing.Size(68, 26);
+            this.StarshipSpeed.Size = new System.Drawing.Size(60, 23);
             this.StarshipSpeed.TabIndex = 6;
             this.StarshipSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.StarshipSpeed.Value = new decimal(new int[] {
@@ -392,20 +392,20 @@ namespace Astrogator
             // StarshipSpeedLabel
             // 
             this.StarshipSpeedLabel.AutoSize = true;
-            this.StarshipSpeedLabel.Location = new System.Drawing.Point(361, 28);
+            this.StarshipSpeedLabel.Location = new System.Drawing.Point(321, 24);
             this.StarshipSpeedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.StarshipSpeedLabel.Name = "StarshipSpeedLabel";
-            this.StarshipSpeedLabel.Size = new System.Drawing.Size(51, 20);
+            this.StarshipSpeedLabel.Size = new System.Drawing.Size(44, 17);
             this.StarshipSpeedLabel.TabIndex = 3;
             this.StarshipSpeedLabel.Text = "EAL/h";
             // 
             // StarshipCombo
             // 
             this.StarshipCombo.FormattingEnabled = true;
-            this.StarshipCombo.Location = new System.Drawing.Point(8, 25);
-            this.StarshipCombo.Margin = new System.Windows.Forms.Padding(4);
+            this.StarshipCombo.Location = new System.Drawing.Point(7, 21);
+            this.StarshipCombo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.StarshipCombo.Name = "StarshipCombo";
-            this.StarshipCombo.Size = new System.Drawing.Size(269, 28);
+            this.StarshipCombo.Size = new System.Drawing.Size(240, 25);
             this.StarshipCombo.TabIndex = 0;
             this.StarshipCombo.SelectedIndexChanged += new System.EventHandler(this.StarshipCombo_SelectedIndexChanged);
             // 
@@ -420,12 +420,12 @@ namespace Astrogator
             this.DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TitleColumn,
             this.ValueColumn});
-            this.DataGridView.Location = new System.Drawing.Point(1, 342);
+            this.DataGridView.Location = new System.Drawing.Point(635, 23);
             this.DataGridView.Name = "DataGridView";
             this.DataGridView.ReadOnly = true;
             this.DataGridView.RowHeadersVisible = false;
             this.DataGridView.RowTemplate.Height = 25;
-            this.DataGridView.Size = new System.Drawing.Size(321, 201);
+            this.DataGridView.Size = new System.Drawing.Size(305, 170);
             this.DataGridView.TabIndex = 13;
             // 
             // TitleColumn
@@ -444,7 +444,7 @@ namespace Astrogator
             // 
             // AstrogatorForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1047, 543);
@@ -452,7 +452,7 @@ namespace Astrogator
             this.Controls.Add(this.StarshipGroup);
             this.Controls.Add(this.arrivalGroup);
             this.Controls.Add(this.departureGroup);
-            this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AstrogatorForm";
