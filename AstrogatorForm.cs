@@ -14,22 +14,22 @@ namespace Astrogator
 {
     public partial class AstrogatorForm : Form
     {
-        
+
         public AstrogatorForm()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         private void loadCombo(ComboBox combo, ComboBox sectorCombo)
         {
             var selected = (StarSector)sectorCombo.SelectedItem;
-            
-            var comboList = new List<StarComboItem>();            
-            foreach(var affiliation in StarCatalogService.GetAffiliations(selected.Name))
+
+            var comboList = new List<StarComboItem>();
+            foreach (var affiliation in StarCatalogService.GetAffiliations(selected.Name))
             {
                 comboList.Add(new StarComboItem { DisplayName = $"<< {affiliation} >>" });
 
-                foreach(var system in StarCatalogService.GetStarSystems(selected.Name, affiliation))
+                foreach (var system in StarCatalogService.GetStarSystems(selected.Name, affiliation))
                 {
                     comboList.Add(new StarComboItem { DisplayName = $"-- {system.Name}", StarSystem = system });
                 }
@@ -58,6 +58,41 @@ namespace Astrogator
             Utils.BindCombo(StarshipCombo, shipCombo, "Name");
         }
 
+        private void setupGridView()
+        {
+            var gridData = new string[]
+            {
+                "Distance",
+                "Durée",
+                "Antimatière",
+                "- Poids consommé",
+                "- Durée du plein"
+            };
+            foreach(var title in gridData)
+            {
+                var gRow = new DataGridViewRow();
+                gRow.Cells.Add(new DataGridViewTextBoxCell() { Value = title });
+                gRow.Cells.Add(new DataGridViewTextBoxCell() { Value = "" });
+                DataGridView.Rows.Add(gRow);
+            }
+            
+        }
+
+        private TravelInfo travelInfo()
+        {
+            var ship = (ShipComboItem)StarshipCombo.SelectedValue;
+            var unknown = UnknownRouteCheckbox.Checked ? (double)UnknownRoute.Value : 1;
+            var detour = DetourCheckbox.Checked ? (double)Detour.Value : 1;
+            return new TravelInfo
+            {
+                Origin = (StarSystem)DepSystemCombo.SelectedValue,
+                Destination = (StarSystem)ArrSystemCombo.SelectedValue,
+                Speed = ship.Speed,
+                UnknownRoute = unknown,
+                Detour = detour
+            };
+        }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
             Utils.BindCombo(DepSectorCombo, StarCatalogService.GetSectors(), "Name");
@@ -65,6 +100,16 @@ namespace Astrogator
             Utils.BindCombo(ArrSectorCombo, StarCatalogService.GetSectors(), "Name");
 
             loadShipCombo();
+
+            setupGridView();
+
+            UnknownRouteCheckbox_CheckedChanged(sender, e);
+            DetourCheckbox_CheckedChanged(sender, e);
+        }
+
+        private void DisplayDistance(double distance)
+        {
+            DataGridView.Rows[0].Cells[1].Value = $"{ distance } AL";
         }
 
         private void RefreshDistance()
@@ -75,8 +120,9 @@ namespace Astrogator
             var starSystem2 = (StarSystem)ArrSystemCombo.SelectedValue;
             if (starSystem2 == null) return;
 
-            var distance = StarCatalogService.Distance(starSystem1.Location, starSystem2.Location);
-            DistanceLabel.Text = distance.ToString();
+            var distance = StarCatalogService.Distance(travelInfo());
+
+            DisplayDistance(distance);
         }
 
         private void DepartureCombo_SelectedIndexChanged(object sender, EventArgs e)
@@ -101,9 +147,15 @@ namespace Astrogator
             RefreshDistance();
         }
 
+        private void DisplayTime()
+        {
+            DataGridView.Rows[1].Cells[1].Value = StarshipService.TravelTime(travelInfo());
+        }
+
         private void CalculateButton_Click(object sender, EventArgs e)
         {
             RefreshDistance();
+            DisplayTime();
         }
 
         private void StarshipCombo_SelectedIndexChanged(object sender, EventArgs e)
@@ -120,6 +172,16 @@ namespace Astrogator
         private void ArrSectorCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
             loadCombo(ArrSystemCombo, ArrSectorCombo);
+        }
+
+        private void UnknownRouteCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            UnknownRoute.Enabled = UnknownRouteCheckbox.Checked;
+        }
+
+        private void DetourCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            Detour.Enabled = DetourCheckbox.Checked;
         }
     }
 }

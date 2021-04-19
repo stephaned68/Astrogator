@@ -33,24 +33,31 @@ namespace Astrogator
             AstrogatorMenuItem_Click(sender, e);
         }
 
+        private void MenuItemForm(ToolStripItem menuItem)
+        {
+            var form = Utils.GetForm((string)menuItem.Tag);
+            if (form != null)
+                SpawnForm(form);
+        }
+
         private void AstrogatorMenuItem_Click(object sender, EventArgs e)
         {
-            SpawnForm(new AstrogatorForm());
+            MenuItemForm(AstrogatorMenuItem);
         }
 
         private void StarshipsMenuItem_Click(object sender, EventArgs e)
         {
-            SpawnForm(new StarshipsForm());
+            MenuItemForm(StarshipsMenuItem);
         }
 
         private void AffiliationsMenuItem_Click(object sender, EventArgs e)
         {
-            SpawnForm(new AffiliationsForm());
+            MenuItemForm(AffiliationsMenuItem);
         }
 
         private void CatalogMenuItem_Click(object sender, EventArgs e)
         {
-            SpawnForm(new StarCatalogForm());
+            MenuItemForm(CatalogMenuItem);
         }
 
         private void MainForm_MdiChildActivate(object sender, EventArgs e)

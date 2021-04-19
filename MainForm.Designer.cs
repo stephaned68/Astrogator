@@ -59,7 +59,7 @@ namespace Astrogator
             this.MenuBar.Location = new System.Drawing.Point(0, 0);
             this.MenuBar.Name = "MenuBar";
             this.MenuBar.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.MenuBar.Size = new System.Drawing.Size(884, 31);
+            this.MenuBar.Size = new System.Drawing.Size(944, 31);
             this.MenuBar.TabIndex = 0;
             this.MenuBar.Text = "menuStrip1";
             // 
@@ -68,6 +68,7 @@ namespace Astrogator
             this.AstrogatorMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AstrogatorMenuItem.Name = "AstrogatorMenuItem";
             this.AstrogatorMenuItem.Size = new System.Drawing.Size(117, 25);
+            this.AstrogatorMenuItem.Tag = "AstrogatorForm";
             this.AstrogatorMenuItem.Text = "Astrogateur";
             this.AstrogatorMenuItem.Click += new System.EventHandler(this.AstrogatorMenuItem_Click);
             // 
@@ -75,6 +76,7 @@ namespace Astrogator
             // 
             this.CatalogMenuItem.Name = "CatalogMenuItem";
             this.CatalogMenuItem.Size = new System.Drawing.Size(108, 25);
+            this.CatalogMenuItem.Tag = "StarCatalogForm";
             this.CatalogMenuItem.Text = "Catalogue";
             this.CatalogMenuItem.Click += new System.EventHandler(this.CatalogMenuItem_Click);
             // 
@@ -92,6 +94,7 @@ namespace Astrogator
             // 
             this.AffiliationsMenuItem.Name = "AffiliationsMenuItem";
             this.AffiliationsMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.AffiliationsMenuItem.Tag = "AffiliationsForm";
             this.AffiliationsMenuItem.Text = "Secteurs, Affiliations";
             this.AffiliationsMenuItem.Click += new System.EventHandler(this.AffiliationsMenuItem_Click);
             // 
@@ -104,6 +107,7 @@ namespace Astrogator
             // 
             this.StarshipsMenuItem.Name = "StarshipsMenuItem";
             this.StarshipsMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.StarshipsMenuItem.Tag = "StarshipsForm";
             this.StarshipsMenuItem.Text = "Vaisseaux";
             this.StarshipsMenuItem.Click += new System.EventHandler(this.StarshipsMenuItem_Click);
             // 
@@ -137,7 +141,7 @@ namespace Astrogator
             this.TabbedForms.Multiline = true;
             this.TabbedForms.Name = "TabbedForms";
             this.TabbedForms.SelectedIndex = 0;
-            this.TabbedForms.Size = new System.Drawing.Size(884, 38);
+            this.TabbedForms.Size = new System.Drawing.Size(944, 38);
             this.TabbedForms.TabIndex = 2;
             this.TabbedForms.Visible = false;
             this.TabbedForms.SelectedIndexChanged += new System.EventHandler(this.TabbedForms_SelectedIndexChanged);
@@ -160,7 +164,7 @@ namespace Astrogator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.ClientSize = new System.Drawing.Size(944, 681);
             this.Controls.Add(this.TabbedForms);
             this.Controls.Add(this.MenuBar);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -10,6 +11,25 @@ namespace Astrogator
 {
     public class Utils
     {
+        public static object CreateInstance(string className)
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+
+            var type = assembly.GetTypes()
+                .First(t => t.Name == className);
+
+            return Activator.CreateInstance(type);
+        }
+
+        public static Form GetForm(string formName)
+        {
+            Form form = null;
+            if (formName != null)
+            {
+                form = (Form)CreateInstance(formName.ToString());
+            }
+            return form;
+        }
 
         public static void CopyData()
         {

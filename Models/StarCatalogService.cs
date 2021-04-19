@@ -74,19 +74,19 @@ namespace Astrogator.Models
             return persisted;
         }
 
-        public static double Distance(Coordinates star1, Coordinates star2)
+        public static int Distance(TravelInfo travel)
         {
             double result = 0;
 
-            if (star1 != null && star2 != null)
+            if (travel.Origin != null && travel.Destination != null)
             {
-                result += Math.Pow((star1.Longitude - star2.Longitude), 2);
-                result += Math.Pow((star1.Latitude - star2.Latitude), 2);
-                result += Math.Pow((star1.Height - star2.Height), 2);
+                result += Math.Pow((travel.Origin.Location.Longitude - travel.Destination.Location.Longitude), 2);
+                result += Math.Pow((travel.Origin.Location.Latitude - travel.Destination.Location.Latitude), 2);
+                result += Math.Pow((travel.Origin.Location.Height - travel.Destination.Location.Height), 2);
                 result = Math.Sqrt(result);
             }
 
-            return Math.Floor(result + 0.5);
+            return (int)Math.Floor(result * travel.UnknownRoute * travel.Detour + 0.5);
         }
     }
 }

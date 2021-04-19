@@ -79,5 +79,30 @@ namespace Astrogator.Models
 
             return WriteFile(list);
         }
+
+        public static double TravelHours(TravelInfo travel)
+        {
+            if (travel.Speed == 0)
+                return 0;
+
+            var distance = StarCatalogService.Distance(travel);
+            double time = distance / travel.Speed;
+            return Math.Floor(time + 0.5);
+        }
+
+        public static string TravelTime(TravelInfo travel)
+        {
+            var result = "";
+            int time = (int)TravelHours(travel);
+            if (time == 0)
+                return result;
+
+            if (time < 24)
+                return $"{ time } heures";
+            result = $"{ time / 24 } jours";
+            if (time % 24 != 0)
+                result += $", { time % 24 } heures";
+            return result;
+        }
     }
 }

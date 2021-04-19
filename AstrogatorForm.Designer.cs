@@ -47,16 +47,27 @@ namespace Astrogator
             this.ArrLongitude = new System.Windows.Forms.TextBox();
             this.arrLatitudeLabel = new System.Windows.Forms.Label();
             this.ArrLatitude = new System.Windows.Forms.TextBox();
-            this.DistanceLabel = new System.Windows.Forms.Label();
             this.CalculateButton = new System.Windows.Forms.Button();
             this.StarshipGroup = new System.Windows.Forms.GroupBox();
+            this.Detour = new System.Windows.Forms.NumericUpDown();
+            this.DetourCheckbox = new System.Windows.Forms.CheckBox();
+            this.UnknownRoute = new System.Windows.Forms.NumericUpDown();
+            this.UnknownRouteCheckbox = new System.Windows.Forms.CheckBox();
+            this.CreditLabel = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.StarshipSpeed = new System.Windows.Forms.NumericUpDown();
             this.StarshipSpeedLabel = new System.Windows.Forms.Label();
             this.StarshipCombo = new System.Windows.Forms.ComboBox();
+            this.DataGridView = new System.Windows.Forms.DataGridView();
+            this.TitleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValueColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departureGroup.SuspendLayout();
             this.arrivalGroup.SuspendLayout();
             this.StarshipGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Detour)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UnknownRoute)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StarshipSpeed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // DepSystemCombo
@@ -245,21 +256,10 @@ namespace Astrogator
             this.ArrLatitude.Size = new System.Drawing.Size(127, 26);
             this.ArrLatitude.TabIndex = 4;
             // 
-            // DistanceLabel
-            // 
-            this.DistanceLabel.AutoSize = true;
-            this.DistanceLabel.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DistanceLabel.Location = new System.Drawing.Point(158, 422);
-            this.DistanceLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.DistanceLabel.Name = "DistanceLabel";
-            this.DistanceLabel.Size = new System.Drawing.Size(22, 28);
-            this.DistanceLabel.TabIndex = 10;
-            this.DistanceLabel.Text = "-";
-            // 
             // CalculateButton
             // 
             this.CalculateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CalculateButton.Location = new System.Drawing.Point(12, 422);
+            this.CalculateButton.Location = new System.Drawing.Point(558, 60);
             this.CalculateButton.Margin = new System.Windows.Forms.Padding(4);
             this.CalculateButton.Name = "CalculateButton";
             this.CalculateButton.Size = new System.Drawing.Size(139, 33);
@@ -270,6 +270,13 @@ namespace Astrogator
             // 
             // StarshipGroup
             // 
+            this.StarshipGroup.Controls.Add(this.Detour);
+            this.StarshipGroup.Controls.Add(this.DetourCheckbox);
+            this.StarshipGroup.Controls.Add(this.UnknownRoute);
+            this.StarshipGroup.Controls.Add(this.UnknownRouteCheckbox);
+            this.StarshipGroup.Controls.Add(this.CreditLabel);
+            this.StarshipGroup.Controls.Add(this.textBox1);
+            this.StarshipGroup.Controls.Add(this.CalculateButton);
             this.StarshipGroup.Controls.Add(this.StarshipSpeed);
             this.StarshipGroup.Controls.Add(this.StarshipSpeedLabel);
             this.StarshipGroup.Controls.Add(this.StarshipCombo);
@@ -277,14 +284,90 @@ namespace Astrogator
             this.StarshipGroup.Margin = new System.Windows.Forms.Padding(4);
             this.StarshipGroup.Name = "StarshipGroup";
             this.StarshipGroup.Padding = new System.Windows.Forms.Padding(4);
-            this.StarshipGroup.Size = new System.Drawing.Size(705, 116);
+            this.StarshipGroup.Size = new System.Drawing.Size(705, 101);
             this.StarshipGroup.TabIndex = 12;
             this.StarshipGroup.TabStop = false;
             this.StarshipGroup.Text = "Vaisseau";
             // 
+            // Detour
+            // 
+            this.Detour.DecimalPlaces = 2;
+            this.Detour.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.Detour.Location = new System.Drawing.Point(424, 64);
+            this.Detour.Name = "Detour";
+            this.Detour.Size = new System.Drawing.Size(68, 26);
+            this.Detour.TabIndex = 16;
+            this.Detour.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Detour.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // DetourCheckbox
+            // 
+            this.DetourCheckbox.AutoSize = true;
+            this.DetourCheckbox.Location = new System.Drawing.Point(336, 65);
+            this.DetourCheckbox.Name = "DetourCheckbox";
+            this.DetourCheckbox.Size = new System.Drawing.Size(82, 24);
+            this.DetourCheckbox.TabIndex = 15;
+            this.DetourCheckbox.Text = "Détour ";
+            this.DetourCheckbox.UseVisualStyleBackColor = true;
+            this.DetourCheckbox.CheckedChanged += new System.EventHandler(this.DetourCheckbox_CheckedChanged);
+            // 
+            // UnknownRoute
+            // 
+            this.UnknownRoute.DecimalPlaces = 2;
+            this.UnknownRoute.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.UnknownRoute.Location = new System.Drawing.Point(209, 64);
+            this.UnknownRoute.Name = "UnknownRoute";
+            this.UnknownRoute.Size = new System.Drawing.Size(68, 26);
+            this.UnknownRoute.TabIndex = 14;
+            this.UnknownRoute.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.UnknownRoute.Value = new decimal(new int[] {
+            120,
+            0,
+            0,
+            131072});
+            // 
+            // UnknownRouteCheckbox
+            // 
+            this.UnknownRouteCheckbox.AutoSize = true;
+            this.UnknownRouteCheckbox.Location = new System.Drawing.Point(11, 65);
+            this.UnknownRouteCheckbox.Name = "UnknownRouteCheckbox";
+            this.UnknownRouteCheckbox.Size = new System.Drawing.Size(144, 24);
+            this.UnknownRouteCheckbox.TabIndex = 13;
+            this.UnknownRouteCheckbox.Text = "Route inconnue";
+            this.UnknownRouteCheckbox.UseVisualStyleBackColor = true;
+            this.UnknownRouteCheckbox.CheckedChanged += new System.EventHandler(this.UnknownRouteCheckbox_CheckedChanged);
+            // 
+            // CreditLabel
+            // 
+            this.CreditLabel.AutoSize = true;
+            this.CreditLabel.Location = new System.Drawing.Point(530, 28);
+            this.CreditLabel.Name = "CreditLabel";
+            this.CreditLabel.Size = new System.Drawing.Size(30, 20);
+            this.CreditLabel.TabIndex = 12;
+            this.CreditLabel.Text = "Cr.";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(424, 25);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.TabIndex = 7;
+            // 
             // StarshipSpeed
             // 
-            this.StarshipSpeed.Location = new System.Drawing.Point(287, 28);
+            this.StarshipSpeed.Location = new System.Drawing.Point(285, 26);
             this.StarshipSpeed.Margin = new System.Windows.Forms.Padding(4);
             this.StarshipSpeed.Maximum = new decimal(new int[] {
             3000,
@@ -297,7 +380,7 @@ namespace Astrogator
             0,
             0});
             this.StarshipSpeed.Name = "StarshipSpeed";
-            this.StarshipSpeed.Size = new System.Drawing.Size(75, 26);
+            this.StarshipSpeed.Size = new System.Drawing.Size(68, 26);
             this.StarshipSpeed.TabIndex = 6;
             this.StarshipSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.StarshipSpeed.Value = new decimal(new int[] {
@@ -309,7 +392,7 @@ namespace Astrogator
             // StarshipSpeedLabel
             // 
             this.StarshipSpeedLabel.AutoSize = true;
-            this.StarshipSpeedLabel.Location = new System.Drawing.Point(365, 31);
+            this.StarshipSpeedLabel.Location = new System.Drawing.Point(361, 28);
             this.StarshipSpeedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.StarshipSpeedLabel.Name = "StarshipSpeedLabel";
             this.StarshipSpeedLabel.Size = new System.Drawing.Size(51, 20);
@@ -326,15 +409,47 @@ namespace Astrogator
             this.StarshipCombo.TabIndex = 0;
             this.StarshipCombo.SelectedIndexChanged += new System.EventHandler(this.StarshipCombo_SelectedIndexChanged);
             // 
+            // DataGridView
+            // 
+            this.DataGridView.AllowUserToAddRows = false;
+            this.DataGridView.AllowUserToDeleteRows = false;
+            this.DataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.DataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridView.ColumnHeadersVisible = false;
+            this.DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TitleColumn,
+            this.ValueColumn});
+            this.DataGridView.Location = new System.Drawing.Point(1, 342);
+            this.DataGridView.Name = "DataGridView";
+            this.DataGridView.ReadOnly = true;
+            this.DataGridView.RowHeadersVisible = false;
+            this.DataGridView.RowTemplate.Height = 25;
+            this.DataGridView.Size = new System.Drawing.Size(321, 201);
+            this.DataGridView.TabIndex = 13;
+            // 
+            // TitleColumn
+            // 
+            this.TitleColumn.HeaderText = "";
+            this.TitleColumn.Name = "TitleColumn";
+            this.TitleColumn.ReadOnly = true;
+            this.TitleColumn.Width = 150;
+            // 
+            // ValueColumn
+            // 
+            this.ValueColumn.HeaderText = "";
+            this.ValueColumn.Name = "ValueColumn";
+            this.ValueColumn.ReadOnly = true;
+            this.ValueColumn.Width = 150;
+            // 
             // AstrogatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(708, 543);
+            this.ClientSize = new System.Drawing.Size(1047, 543);
+            this.Controls.Add(this.DataGridView);
             this.Controls.Add(this.StarshipGroup);
-            this.Controls.Add(this.CalculateButton);
-            this.Controls.Add(this.DistanceLabel);
             this.Controls.Add(this.arrivalGroup);
             this.Controls.Add(this.departureGroup);
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -351,9 +466,11 @@ namespace Astrogator
             this.arrivalGroup.PerformLayout();
             this.StarshipGroup.ResumeLayout(false);
             this.StarshipGroup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Detour)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UnknownRoute)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StarshipSpeed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -374,7 +491,6 @@ namespace Astrogator
         private System.Windows.Forms.TextBox ArrLongitude;
         private System.Windows.Forms.Label arrLatitudeLabel;
         private System.Windows.Forms.TextBox ArrLatitude;
-        private System.Windows.Forms.Label DistanceLabel;
         private System.Windows.Forms.Button CalculateButton;
         private System.Windows.Forms.GroupBox StarshipGroup;
         private System.Windows.Forms.Label StarshipSpeedLabel;
@@ -382,6 +498,15 @@ namespace Astrogator
         private System.Windows.Forms.NumericUpDown StarshipSpeed;
         private System.Windows.Forms.ComboBox DepSectorCombo;
         private System.Windows.Forms.ComboBox ArrSectorCombo;
+        private System.Windows.Forms.NumericUpDown Detour;
+        private System.Windows.Forms.CheckBox DetourCheckbox;
+        private System.Windows.Forms.NumericUpDown UnknownRoute;
+        private System.Windows.Forms.CheckBox UnknownRouteCheckbox;
+        private System.Windows.Forms.Label CreditLabel;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView DataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TitleColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValueColumn;
     }
 }
 
