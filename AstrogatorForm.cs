@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Astrogator
 {
-    public partial class AstrogatorForm : Form
+    public partial class AstrogatorForm : BaseForm
     {
 
         public AstrogatorForm()
@@ -107,9 +107,15 @@ namespace Astrogator
             DetourCheckbox_CheckedChanged(sender, e);
         }
 
-        private void DisplayDistance(double distance)
+        private void DisplayDistance()
         {
-            DataGridView.Rows[0].Cells[1].Value = $"{ distance } AL";
+            var cell = DataGridView.Rows[0].Cells[1];
+            var travel = travelInfo();
+            cell.Value = $"{ StarCatalogService.Distance(travel) } AL";
+            if (travel.Detour != 1)
+            {
+                cell.ToolTipText = $"{ StarCatalogService.Distance(travel, false) } AL x { travel.Detour } de détour";
+            }
         }
 
         private void RefreshDistance()
@@ -120,9 +126,7 @@ namespace Astrogator
             var starSystem2 = (StarSystem)ArrSystemCombo.SelectedValue;
             if (starSystem2 == null) return;
 
-            var distance = StarCatalogService.Distance(travelInfo());
-
-            DisplayDistance(distance);
+            DisplayDistance();
         }
 
         private void DepartureCombo_SelectedIndexChanged(object sender, EventArgs e)
@@ -149,7 +153,13 @@ namespace Astrogator
 
         private void DisplayTime()
         {
-            DataGridView.Rows[1].Cells[1].Value = StarshipService.TravelTime(travelInfo());
+            var cell = DataGridView.Rows[1].Cells[1];
+            var travel = travelInfo();
+            cell.Value = StarshipService.TravelTime(travel);
+            var tipText = $"{ StarshipService.TravelHours(travel, false) } heures";
+            if (travel.UnknownRoute != 1)
+                tipText += $" x { travel.UnknownRoute } pour méconnaissance de la Route";
+            cell.ToolTipText = tipText;
         }
 
         private void CalculateButton_Click(object sender, EventArgs e)

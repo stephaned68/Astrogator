@@ -74,7 +74,7 @@ namespace Astrogator.Models
             return persisted;
         }
 
-        public static int Distance(TravelInfo travel)
+        public static int Distance(TravelInfo travel, bool useDetour = true)
         {
             double result = 0;
 
@@ -85,8 +85,10 @@ namespace Astrogator.Models
                 result += Math.Pow((travel.Origin.Location.Height - travel.Destination.Location.Height), 2);
                 result = Math.Sqrt(result);
             }
+            if (useDetour && travel.Detour != 1)
+                result *= travel.Detour;
 
-            return (int)Math.Floor(result * travel.UnknownRoute * travel.Detour + 0.5);
+            return (int)Math.Floor(result + 0.5);
         }
     }
 }

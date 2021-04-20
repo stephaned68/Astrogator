@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Astrogator
 {
-    public partial class StarCatalogForm : Form
+    public partial class StarCatalogForm : BaseForm
     {
         private DataTable stars;
 

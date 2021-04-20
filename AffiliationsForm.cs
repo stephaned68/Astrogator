@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Astrogator
 {
-    public partial class AffiliationsForm : Form
+    public partial class AffiliationsForm : BaseForm
     {
         private MainForm mainForm;
 

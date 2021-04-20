@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Astrogator
 {
-    public partial class MainForm : Form
+    public partial class MainForm : BaseForm
     {
 
         public MainForm()
@@ -125,6 +125,17 @@ namespace Astrogator
             if (icon != ToolTipIcon.None)
                 FlashMessages.BalloonTipIcon = icon;
             FlashMessages.ShowBalloonTip(seconds * 1000);
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var forms = MdiChildren.Length;
+            if (forms < 2)
+                return;
+
+            var resp = Utils.Confirm($"Vous allez fermer { forms } onglets.\n\nConfirmez-vous la fermeture du programme ?");
+            if (resp == DialogResult.No)
+                e.Cancel = true;
         }
     }
 }

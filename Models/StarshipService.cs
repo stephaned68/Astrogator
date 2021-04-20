@@ -80,13 +80,14 @@ namespace Astrogator.Models
             return WriteFile(list);
         }
 
-        public static double TravelHours(TravelInfo travel)
+        public static double TravelHours(TravelInfo travel, bool useUnknownRoute = true)
         {
             if (travel.Speed == 0)
                 return 0;
 
             var distance = StarCatalogService.Distance(travel);
             double time = distance / travel.Speed;
+            time *= useUnknownRoute ? travel.UnknownRoute : 1;
             return Math.Floor(time + 0.5);
         }
 
@@ -98,10 +99,15 @@ namespace Astrogator.Models
                 return result;
 
             if (time < 24)
-                return $"{ time } heures";
-            result = $"{ time / 24 } jours";
-            if (time % 24 != 0)
-                result += $", { time % 24 } heures";
+                return $"{ time } { (time >= 2 ? "heures" : "heure") }";
+
+            var days = time / 24;
+            result = $"{ days } { ( days >= 2 ? "jours" : "jour" ) }";
+
+            var hours = time % 24;
+            if (hours != 0)
+                result += $", { hours } { (hours >= 2 ? "heures" : "heure") }";
+
             return result;
         }
     }
