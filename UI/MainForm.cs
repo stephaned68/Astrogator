@@ -29,7 +29,12 @@ namespace Astrogator
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Utils.CopyData();
+            var files = Utils.CopyData();
+            if (files.Count > 0)
+            {
+                var message = "Fichiers copiés :\n" + string.Join('\n', files);
+                Notify(message, ToolTipIcon.Info);
+            }
             AstrogatorMenuItem_Click(sender, e);
         }
 

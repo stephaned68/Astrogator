@@ -162,10 +162,29 @@ namespace Astrogator
             cell.ToolTipText = tipText;
         }
 
+        private void DisplayTravel()
+        {
+            var list = EncounterService.GetEncounters(travelInfo());
+            TravelView.Items.Clear();
+            foreach(var item in list)
+            {
+                TravelView.Items.Add(
+                    new ListViewItem(
+                        new string[]
+                        {
+                            item.TimeStamp.ToString(),
+                            item.Distance.ToString(),
+                            item.Event
+                        })
+                    );
+            }
+        }
+
         private void CalculateButton_Click(object sender, EventArgs e)
         {
             RefreshDistance();
             DisplayTime();
+            DisplayTravel();
         }
 
         private void StarshipCombo_SelectedIndexChanged(object sender, EventArgs e)

@@ -1,0 +1,762 @@
+[
+  {
+    "Name": "Main",
+    "Description": "",
+    "Dice": 2,
+    "Results": [
+      {
+        "Value": 5,
+        "Description": "",
+        "Table": "Normal"
+      },
+      {
+        "Value": 6,
+        "Description": "",
+        "Table": "Normal"
+      },
+      {
+        "Value": 7,
+        "Description": "",
+        "Table": "Normal"
+      },
+      {
+        "Value": 8,
+        "Description": "",
+        "Table": "Normal"
+      },
+      {
+        "Value": 9,
+        "Description": "",
+        "Table": "Normal"
+      },
+      {
+        "Value": 10,
+        "Description": "",
+        "Table": "Special"
+      },
+      {
+        "Value": 11,
+        "Description": "",
+        "Table": "Special"
+      },
+      {
+        "Value": 12,
+        "Description": "",
+        "Table": "Special"
+      }
+    ]
+  },
+  {
+    "Name": "Normal",
+    "Description": "",
+    "Dice": 1,
+    "Results": [
+      {
+        "Value": 1,
+        "Description": "Cathédrale",
+        "Table": "Cathedrale"
+      },
+      {
+        "Value": 2,
+        "Description": "Cathédrale",
+        "Table": "Cathedrale"
+      },
+      {
+        "Value": 3,
+        "Description": "Spire",
+        "Table": ""
+      },
+      {
+        "Value": 4,
+        "Description": "Spire",
+        "Table": ""
+      },
+      {
+        "Value": 5,
+        "Description": "Reflet",
+        "Table": "Reflet"
+      },
+      {
+        "Value": 6,
+        "Description": "Reflet",
+        "Table": "Reflet"
+      }
+    ]
+  },
+  {
+    "Name": "Cathedrale",
+    "Description": "Cathédrale",
+    "Dice": 1,
+    "Results": [
+      {
+        "Value": 1,
+        "Description": " - 20 EAL de détour",
+        "Table": ""
+      },
+      {
+        "Value": 2,
+        "Description": " - 40 EAL de détour",
+        "Table": ""
+      },
+      {
+        "Value": 3,
+        "Description": " - 60 EAL de détour",
+        "Table": ""
+      },
+      {
+        "Value": 4,
+        "Description": " - 80 EAL de détour",
+        "Table": ""
+      },
+      {
+        "Value": 5,
+        "Description": " - 100 EAL de détour",
+        "Table": ""
+      },
+      {
+        "Value": 6,
+        "Description": " - 120 EAL de détour",
+        "Table": ""
+      }
+    ]
+  },
+  {
+    "Name": "Reflet",
+    "Description": "Reflets",
+    "Dice": 2,
+    "Results": [
+      {
+        "Value": 2,
+        "Description": " (Trou noir)",
+        "Table": ""
+      },
+      {
+        "Value": 3,
+        "Description": " (Etoile à neutrons)",
+        "Table": ""
+      },
+      {
+        "Value": 4,
+        "Description": " (Etoile à neutrons)",
+        "Table": ""
+      },
+      {
+        "Value": 5,
+        "Description": " (Naine blanche)",
+        "Table": ""
+      },
+      {
+        "Value": 6,
+        "Description": " (Naine blanche)",
+        "Table": ""
+      },
+      {
+        "Value": 7,
+        "Description": " (Naine blanche)",
+        "Table": ""
+      },
+      {
+        "Value": 8,
+        "Description": " (Naine blanche)",
+        "Table": ""
+      },
+      {
+        "Value": 9,
+        "Description": " (Naine blanche)",
+        "Table": ""
+      },
+      {
+        "Value": 10,
+        "Description": " (Etoile à neutrons)",
+        "Table": ""
+      },
+      {
+        "Value": 11,
+        "Description": " (Etoile à neutrons)",
+        "Table": ""
+      },
+      {
+        "Value": 12,
+        "Description": " (Etoile à neutrons)",
+        "Table": ""
+      }
+    ]
+  },
+  {
+    "Name": "Follets",
+    "Description": "Follets",
+    "Dice": 2,
+    "Results": [
+      {
+        "Value": 2,
+        "Description": " (2 individus)",
+        "Table": "Follets.Comportement"
+      },
+      {
+        "Value": 3,
+        "Description": " (3 individus)",
+        "Table": "Follets.Comportement"
+      },
+      {
+        "Value": 4,
+        "Description": " (4 individus)",
+        "Table": "Follets.Comportement"
+      },
+      {
+        "Value": 5,
+        "Description": " (5 individus)",
+        "Table": "Follets.Comportement"
+      },
+      {
+        "Value": 6,
+        "Description": " (6 individus)",
+        "Table": "Follets.Comportement"
+      },
+      {
+        "Value": 7,
+        "Description": " (7 individus)",
+        "Table": "Follets.Comportement"
+      },
+      {
+        "Value": 8,
+        "Description": " (8 individus)",
+        "Table": "Follets.Comportement"
+      },
+      {
+        "Value": 9,
+        "Description": " (9 individus)",
+        "Table": "Follets.Comportement"
+      },
+      {
+        "Value": 10,
+        "Description": " (10 individus)",
+        "Table": "Follets.Comportement"
+      },
+      {
+        "Value": 11,
+        "Description": " (11 individus)",
+        "Table": "Follets.Comportement"
+      },
+      {
+        "Value": 12,
+        "Description": " (12 individus)",
+        "Table": "Follets.Comportement"
+      }
+    ]
+  },
+  {
+    "Name": "Follets.Comportement",
+    "Description": "Agressivité des Follets",
+    "Dice": 2,
+    "Results": [
+      {
+        "Value": 2,
+        "Description": " - Hostilité : attaque immédiate.",
+        "Table": ""
+      },
+      {
+        "Value": 3,
+        "Description": " - Hostilité : attaque immédiate.",
+        "Table": ""
+      },
+      {
+        "Value": 4,
+        "Description": " - Hostilité : attaque immédiate.",
+        "Table": ""
+      },
+      {
+        "Value": 5,
+        "Description": " - Hostilité : attaque immédiate.",
+        "Table": ""
+      },
+      {
+        "Value": 6,
+        "Description": " - Méfiance : attaque si provocation.",
+        "Table": ""
+      },
+      {
+        "Value": 7,
+        "Description": " - Méfiance : attaque si provocation.",
+        "Table": ""
+      },
+      {
+        "Value": 8,
+        "Description": " - Méfiance : attaque si provocation.",
+        "Table": ""
+      },
+      {
+        "Value": 9,
+        "Description": " - Méfiance : attaque si provocation.",
+        "Table": ""
+      },
+      {
+        "Value": 10,
+        "Description": " - Indifférence.",
+        "Table": ""
+      },
+      {
+        "Value": 11,
+        "Description": " - Indifférence.",
+        "Table": ""
+      },
+      {
+        "Value": 12,
+        "Description": " - Communication.",
+        "Table": ""
+      }
+    ]
+  },
+  {
+    "Name": "Special.0",
+    "Description": "Régions Désertiques",
+    "Dice": 1,
+    "Results": [
+      {
+        "Value": 1,
+        "Description": "Tempête",
+        "Table": ""
+      },
+      {
+        "Value": 2,
+        "Description": "Tempête",
+        "Table": ""
+      },
+      {
+        "Value": 3,
+        "Description": "Cathédrale",
+        "Table": "Cathedrale"
+      },
+      {
+        "Value": 4,
+        "Description": "Cathédrale",
+        "Table": "Cathedrale"
+      },
+      {
+        "Value": 5,
+        "Description": "Follets",
+        "Table": "Follets"
+      },
+      {
+        "Value": 6,
+        "Description": "",
+        "Table": "SpecialShip0"
+      }
+    ]
+  },
+  {
+    "Name": "Special.1",
+    "Description": "Mondes NT1 à 4",
+    "Dice": 1,
+    "Results": [
+      {
+        "Value": 1,
+        "Description": "Tempête",
+        "Table": ""
+      },
+      {
+        "Value": 2,
+        "Description": "Tempête",
+        "Table": ""
+      },
+      {
+        "Value": 3,
+        "Description": "Cathédrale",
+        "Table": "Cathedrale"
+      },
+      {
+        "Value": 4,
+        "Description": "Cathédrale",
+        "Table": "Cathedrale"
+      },
+      {
+        "Value": 5,
+        "Description": "Follets",
+        "Table": "Follets"
+      },
+      {
+        "Value": 6,
+        "Description": "",
+        "Table": "SpecialShip14"
+      }
+    ]
+  },
+
+  {
+    "Name": "Special.2",
+    "Description": "Mondes NT1 à 4",
+    "Dice": 1,
+    "Results": [
+      {
+        "Value": 1,
+        "Description": "Tempête",
+        "Table": ""
+      },
+      {
+        "Value": 2,
+        "Description": "Tempête",
+        "Table": ""
+      },
+      {
+        "Value": 3,
+        "Description": "Cathédrale",
+        "Table": "Cathedrale"
+      },
+      {
+        "Value": 4,
+        "Description": "Cathédrale",
+        "Table": "Cathedrale"
+      },
+      {
+        "Value": 5,
+        "Description": "Follets",
+        "Table": "Follets"
+      },
+      {
+        "Value": 6,
+        "Description": "",
+        "Table": "SpecialShip14"
+      }
+    ]
+  },
+
+  {
+    "Name": "Special.3",
+    "Description": "Mondes NT1 à 4",
+    "Dice": 1,
+    "Results": [
+      {
+        "Value": 1,
+        "Description": "Tempête",
+        "Table": ""
+      },
+      {
+        "Value": 2,
+        "Description": "Tempête",
+        "Table": ""
+      },
+      {
+        "Value": 3,
+        "Description": "Cathédrale",
+        "Table": "Cathedrale"
+      },
+      {
+        "Value": 4,
+        "Description": "Cathédrale",
+        "Table": "Cathedrale"
+      },
+      {
+        "Value": 5,
+        "Description": "Follets",
+        "Table": "Follets"
+      },
+      {
+        "Value": 6,
+        "Description": "",
+        "Table": "SpecialShip14"
+      }
+    ]
+  },
+  {
+    "Name": "Special.4",
+    "Description": "Mondes NT1 à 4",
+    "Dice": 1,
+    "Results": [
+      {
+        "Value": 1,
+        "Description": "Tempête",
+        "Table": ""
+      },
+      {
+        "Value": 2,
+        "Description": "Tempête",
+        "Table": ""
+      },
+      {
+        "Value": 3,
+        "Description": "Cathédrale",
+        "Table": "Cathedrale"
+      },
+      {
+        "Value": 4,
+        "Description": "Cathédrale",
+        "Table": "Cathedrale"
+      },
+      {
+        "Value": 5,
+        "Description": "Follets",
+        "Table": "Follets"
+      },
+      {
+        "Value": 6,
+        "Description": "",
+        "Table": "SpecialShip14"
+      }
+    ]
+  },
+  {
+    "Name": "Special.5",
+    "Description": "Mondes NT5 & 6",
+    "Dice": 1,
+    "Results": [
+      {
+        "Value": 1,
+        "Description": "Tempête",
+        "Table": ""
+      },
+      {
+        "Value": 2,
+        "Description": "Tempête",
+        "Table": ""
+      },
+      {
+        "Value": 3,
+        "Description": "Cathédrale",
+        "Table": "Cathedrale"
+      },
+      {
+        "Value": 4,
+        "Description": "Cathédrale",
+        "Table": "Cathedrale"
+      },
+      {
+        "Value": 5,
+        "Description": "",
+        "Table": "SpecialShip5"
+      },
+      {
+        "Value": 6,
+        "Description": "",
+        "Table": "SpecialShip6"
+      }
+    ]
+  },
+  {
+    "Name": "Special.6",
+    "Description": "Mondes NT5 & 6",
+    "Dice": 1,
+    "Results": [
+      {
+        "Value": 1,
+        "Description": "Tempête",
+        "Table": ""
+      },
+      {
+        "Value": 2,
+        "Description": "Tempête",
+        "Table": ""
+      },
+      {
+        "Value": 3,
+        "Description": "Cathédrale",
+        "Table": "Cathedrale"
+      },
+      {
+        "Value": 4,
+        "Description": "Cathédrale",
+        "Table": "Cathedrale"
+      },
+      {
+        "Value": 5,
+        "Description": "",
+        "Table": "SpecialShip5"
+      },
+      {
+        "Value": 6,
+        "Description": "",
+        "Table": "SpecialShip6"
+      }
+    ]
+  },
+  {
+    "Name": "SpecialShip0",
+    "Description": "Régions Désertiques",
+    "Dice": 1,
+    "Results": [
+      {
+        "Value": 1,
+        "Description": "Navire Varlet de 1000 tonnes ou plus",
+        "Table": ""
+      },
+      {
+        "Value": 2,
+        "Description": "Navire Varlet de 50 à 500 tonnes",
+        "Table": ""
+      },
+      {
+        "Value": 3,
+        "Description": "Navire Varlet de petit tonnage",
+        "Table": ""
+      },
+      {
+        "Value": 4,
+        "Description": "Navire Lehouine civil. Embarquement possible",
+        "Table": ""
+      },
+      {
+        "Value": 5,
+        "Description": "Navire Varlet ou Lehouine de la Division Nova de l'Armée",
+        "Table": "SpecialShipNova"
+      },
+      {
+        "Value": 6,
+        "Description": "Navire suspect",
+        "Table": "SpecialShipSuspect"
+      }
+    ]
+  },
+  {
+    "Name": "SpecialShipNova",
+    "Dice": 1,
+    "Results": [
+      {
+        "Value": 1,
+        "Description": " - Contrôle !",
+        "Table": ""
+      }
+    ]
+  },
+  {
+    "Name": "SpecialShipSuspect",
+    "Dice": 1,
+    "Results": [
+      {
+        "Value": 1,
+        "Description": " - Pirate !",
+        "Table": ""
+      }
+    ]
+  },
+  {
+    "Name": "SpecialShip14",
+    "Description": "Mondes NT1 à 4",
+    "Dice": 1,
+    "Results": [
+      {
+        "Value": 1,
+        "Description": "Navire Corsaire",
+        "Table": ""
+      },
+      {
+        "Value": 2,
+        "Description": "Navire Corsaire",
+        "Table": ""
+      },
+      {
+        "Value": 3,
+        "Description": "Navire cargo de 500 tonnes ou plus",
+        "Table": ""
+      },
+      {
+        "Value": 4,
+        "Description": "Navire militaire impérial ou indépendant",
+        "Table": "SpecialShipNavy"
+      },
+      {
+        "Value": 5,
+        "Description": "Navire cargo de 500 tonnes ou plus",
+        "Table": ""
+      },
+      {
+        "Value": 6,
+        "Description": "Navire suspect",
+        "Table": "SpecialShipSuspect"
+      }
+    ]
+  },
+  {
+    "Name": "SpecialShipNavy",
+    "Description": "",
+    "Dice": 1,
+    "Results": [
+      {
+        "Value": 1,
+        "Description": " - Contrôle !",
+        "Table": ""
+      },
+      {
+        "Value": 2,
+        "Description": " - Contrôle !",
+        "Table": ""
+      },
+      {
+        "Value": 3,
+        "Description": " - Contrôle !",
+        "Table": ""
+      }
+    ]
+  },
+  {
+    "Name": "SpecialShip5",
+    "Description": "Mondes NT5",
+    "Dice": 1,
+    "Results": [
+      {
+        "Value": 1,
+        "Description": "Navires commerciaux Varlet de tous types",
+        "Table": ""
+      },
+      {
+        "Value": 2,
+        "Description": "Navires commerciaux Varlet de tous types",
+        "Table": ""
+      },
+      {
+        "Value": 3,
+        "Description": "Navires commerciaux Varlet de tous types",
+        "Table": ""
+      },
+      {
+        "Value": 4,
+        "Description": "Navires commerciaux Varlet de tous types",
+        "Table": ""
+      },
+      {
+        "Value": 5,
+        "Description": "Navires commerciaux Varlet de tous types, plus un Lehouine",
+        "Table": ""
+      },
+      {
+        "Value": 6,
+        "Description": "Navires des Douanes",
+        "Table": "SpecialShipNavy"
+      }
+    ]
+  },
+  {
+    "Name": "SpecialShip6",
+    "Description": "Mondes NT6",
+    "Dice": 1,
+    "Results": [
+      {
+        "Value": 1,
+        "Description": "Navires commerciaux Varlet de tous types",
+        "Table": ""
+      },
+      {
+        "Value": 2,
+        "Description": "Navires commerciaux Varlet de tous types",
+        "Table": ""
+      },
+      {
+        "Value": 3,
+        "Description": "Navires commerciaux Varlet de tous types",
+        "Table": ""
+      },
+      {
+        "Value": 4,
+        "Description": "Navires commerciaux Varlet de tous types, plus un vaisseau Lehouine",
+        "Table": ""
+      },
+      {
+        "Value": 5,
+        "Description": "Navires commerciaux Varlet de tous types, plus plusieurs vaisseaux Lehouine",
+        "Table": ""
+      },
+      {
+        "Value": 6,
+        "Description": "Navires des Douanes",
+        "Table": "SpecialShipNavy"
+      }
+    ]
+  }
+]

@@ -13,8 +13,6 @@ namespace Astrogator
 {
     public partial class AffiliationsForm : BaseForm
     {
-        private MainForm mainForm;
-
         public AffiliationsForm()
         {
             InitializeComponent();
@@ -22,7 +20,6 @@ namespace Astrogator
 
         private void AffiliationsForm_Load(object sender, EventArgs e)
         {
-            mainForm = (MainForm)MdiParent;
             Utils.BindCombo(SectorCombo, Utils.DropList(StarCatalogService.GetSectors()), "Name");
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Astrogator.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -31,16 +32,26 @@ namespace Astrogator
             return form;
         }
 
-        public static void CopyData()
+        public static List<string> CopyData()
         {
             if (!Directory.Exists(Configuration.DataDirectory))
-            {
                 Directory.CreateDirectory(Configuration.DataDirectory);
-                foreach (var file in Directory.GetFiles("Data"))
+
+            var files = new List<string>();
+
+            foreach (var source in Directory.GetFiles("Data"))
+            {
+                var sourceInfo = new FileInfo(source);
+                var target = Path.Combine(Configuration.DataDirectory, Path.GetFileName(source));
+                var targetInfo = new FileInfo(target);
+                if (sourceInfo.LastWriteTime > targetInfo.LastWriteTime)
                 {
-                    File.Copy(file, Path.Combine(Configuration.DataDirectory, Path.GetFileName(file)));
+                    File.Copy(source, target, true);
+                    files.Add(target);
                 }
             }
+
+            return files;
         }
 
         public static IEnumerable<T> DropList<T>(IEnumerable<T> list) where T : new()
@@ -79,6 +90,21 @@ namespace Astrogator
                 buttons,
                 icon
                 );
+        }
+
+        public static RollResult DiceRoller(int numberOfDice, int numberOfFaces = 6)
+        {
+            var result = new RollResult(numberOfDice);
+            var rand = new Random();
+
+            for(var die = 1; die <= numberOfDice; die++)
+            {
+                var roll = rand.Next(1, numberOfFaces);
+                result.Rolls[die - 1] = roll;
+                result.Sum += roll;
+            }
+
+            return result;
         }
     }
 }

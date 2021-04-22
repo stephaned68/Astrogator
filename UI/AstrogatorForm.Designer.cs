@@ -61,6 +61,10 @@ namespace Astrogator
             this.DataGridView = new System.Windows.Forms.DataGridView();
             this.TitleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValueColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TravelView = new System.Windows.Forms.ListView();
+            this.TimeColumnH = new System.Windows.Forms.ColumnHeader();
+            this.EALColumnH = new System.Windows.Forms.ColumnHeader();
+            this.EventColumnH = new System.Windows.Forms.ColumnHeader();
             this.departureGroup.SuspendLayout();
             this.arrivalGroup.SuspendLayout();
             this.StarshipGroup.SuspendLayout();
@@ -442,12 +446,46 @@ namespace Astrogator
             this.ValueColumn.ReadOnly = true;
             this.ValueColumn.Width = 150;
             // 
+            // TravelView
+            // 
+            this.TravelView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.TimeColumnH,
+            this.EALColumnH,
+            this.EventColumnH});
+            this.TravelView.FullRowSelect = true;
+            this.TravelView.GridLines = true;
+            this.TravelView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.TravelView.HideSelection = false;
+            this.TravelView.Location = new System.Drawing.Point(1, 301);
+            this.TravelView.Name = "TravelView";
+            this.TravelView.Size = new System.Drawing.Size(627, 240);
+            this.TravelView.TabIndex = 14;
+            this.TravelView.UseCompatibleStateImageBehavior = false;
+            this.TravelView.View = System.Windows.Forms.View.Details;
+            // 
+            // TimeColumnH
+            // 
+            this.TimeColumnH.Text = "Heure";
+            this.TimeColumnH.Width = 100;
+            // 
+            // EALColumnH
+            // 
+            this.EALColumnH.Text = "EAL";
+            this.EALColumnH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.EALColumnH.Width = 100;
+            // 
+            // EventColumnH
+            // 
+            this.EventColumnH.Text = "Evenement";
+            this.EventColumnH.Width = 400;
+            // 
             // AstrogatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1047, 543);
+            this.Controls.Add(this.TravelView);
             this.Controls.Add(this.DataGridView);
             this.Controls.Add(this.StarshipGroup);
             this.Controls.Add(this.arrivalGroup);
@@ -507,6 +545,10 @@ namespace Astrogator
         private System.Windows.Forms.DataGridView DataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn TitleColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValueColumn;
+        private System.Windows.Forms.ListView TravelView;
+        private System.Windows.Forms.ColumnHeader TimeColumnH;
+        private System.Windows.Forms.ColumnHeader EALColumnH;
+        private System.Windows.Forms.ColumnHeader EventColumnH;
     }
 }
 

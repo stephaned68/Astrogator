@@ -1,15 +1,17 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace Astrogator
 {
     public partial class BaseForm : Form
     {
+        protected MainForm mainForm;
+
         public BaseForm()
         {
             InitializeComponent();
-            this.Font = Configuration.BaseFont;
+            Font = Configuration.BaseFont;
+            mainForm = (MainForm)MdiParent;
         }
 
         private void BaseForm_Load(object sender, EventArgs e)
