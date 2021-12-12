@@ -31,17 +31,19 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "D:\projects\csharp\Astrogator\bin\Release\net6.0-windows\publish\Astrogator.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\projects\csharp\Astrogator\bin\Release\net6.0-windows\publish\Astrogator.deps.json"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\projects\csharp\Astrogator\bin\Release\net6.0-windows\publish\Astrogator.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\projects\csharp\Astrogator\bin\Release\net6.0-windows\publish\Astrogator.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\projects\csharp\Astrogator\bin\Release\net6.0-windows\publish\Astrogator.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\projects\csharp\Astrogator\bin\Release\net6.0-windows\publish\Astrogator.runtimeconfig.json"; DestDir: "{app}"; Flags: ignoreversion
-; NOTE: Don't use "Flags: ignoreversion" on any shared system files
-Source: "D:\projects\csharp\Astrogator\Data\encounter-tables.json"; DestDir: "{userappdata}\Astrogator"; Flags: ignoreversion
-Source: "D:\projects\csharp\Astrogator\Data\ship-classes.json"; DestDir: "{userappdata}\Astrogator"; Flags: ignoreversion
-Source: "D:\projects\csharp\Astrogator\Data\star-catalog.json"; DestDir: "{userappdata}\Astrogator"; Flags: ignoreversion
-Source: "D:\projects\csharp\Astrogator\Data\starships.json"; DestDir: "{userappdata}\Astrogator"; Flags: ignoreversion
+Source: "..\bin\Publish\Astrogator.deps.json"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\bin\Publish\Astrogator.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\bin\Publish\Astrogator.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\bin\Publish\Astrogator.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\bin\Publish\Astrogator.runtimeconfig.json"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\bin\Publish\Data\starships.json"; DestDir: "{app}\Data"; Flags: ignoreversion
+Source: "..\bin\Publish\Data\star-catalog.json"; DestDir: "{app}\Data"; Flags: ignoreversion
+Source: "..\bin\Publish\Data\ship-classes.json"; DestDir: "{app}\Data"; Flags: ignoreversion
+Source: "..\bin\Publish\Data\encounter-tables.json"; DestDir: "{app}\Data"; Flags: ignoreversion
+Source: "C:\Windows\Fonts\GOTHIC.TTF"; DestDir: "{fonts}"; FontInstall: "Century Gothic"; Flags: onlyifdoesntexist uninsneveruninstall
+Source: "C:\Windows\Fonts\GOTHICB.TTF"; DestDir: "{fonts}"; FontInstall: "Century Gothic Gras"; Flags: onlyifdoesntexist uninsneveruninstall
+Source: "C:\Windows\Fonts\GOTHICBI.TTF"; DestDir: "{fonts}"; FontInstall: "Century Gothic Gras Italique"; Flags: onlyifdoesntexist uninsneveruninstall
+Source: "C:\Windows\Fonts\GOTHICI.TTF"; DestDir: "{fonts}"; FontInstall: "Century Gothic Italique"; Flags: onlyifdoesntexist uninsneveruninstall
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
@@ -52,5 +54,3 @@ Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\{#MyAppName}"; Fil
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
 
-[Dirs]
-Name: "{userappdata}\Astrogator"
