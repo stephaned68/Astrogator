@@ -86,7 +86,7 @@ namespace Astrogator.Models
                     {
                         TimeStamp = timestamp,
                         Distance = flight,
-                        Event = "Point de Vérité (navigation)"
+                        Event = "Point de Vérité"
                     });
                     continue;
                 }
@@ -95,11 +95,13 @@ namespace Astrogator.Models
                 if (milestones < encounterAt)
                 {
                     milestones = (int)encounterAt;
+
                     var suffix = "0";
                     if (milestones == 1)
                         suffix = travel.Origin.TechLevel.ToString();
                     if (flight + travel.Speed > distance)
                         suffix = travel.Destination.TechLevel.ToString();
+
                     var encounterText = GetEncounter("",suffix);
                     if (!string.IsNullOrEmpty(encounterText))
                     {
