@@ -17,8 +17,6 @@ namespace Astrogator
 
         private string selectedSector;
 
-        private MainForm mainForm;
-
         public StarCatalogForm()
         {
             InitializeComponent();

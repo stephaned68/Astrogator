@@ -13,7 +13,6 @@ namespace Astrogator
 {
     public partial class StarshipsForm : BaseForm
     {
-        private MainForm mainForm;
 
         private bool editMode;
 
