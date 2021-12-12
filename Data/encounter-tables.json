@@ -90,32 +90,32 @@
     "Results": [
       {
         "Value": 1,
-        "Description": " - 20 EAL de détour",
+        "Description": " : 20 EAL de détour",
         "Table": ""
       },
       {
         "Value": 2,
-        "Description": " - 40 EAL de détour",
+        "Description": " : 40 EAL de détour",
         "Table": ""
       },
       {
         "Value": 3,
-        "Description": " - 60 EAL de détour",
+        "Description": " : 60 EAL de détour",
         "Table": ""
       },
       {
         "Value": 4,
-        "Description": " - 80 EAL de détour",
+        "Description": " : 80 EAL de détour",
         "Table": ""
       },
       {
         "Value": 5,
-        "Description": " - 100 EAL de détour",
+        "Description": " : 100 EAL de détour",
         "Table": ""
       },
       {
         "Value": 6,
-        "Description": " - 120 EAL de détour",
+        "Description": " : 120 EAL de détour",
         "Table": ""
       }
     ]
@@ -127,57 +127,57 @@
     "Results": [
       {
         "Value": 2,
-        "Description": " (Trou noir)",
+        "Description": " : Trou noir",
         "Table": ""
       },
       {
         "Value": 3,
-        "Description": " (Etoile à neutrons)",
+        "Description": " : Etoile à neutrons",
         "Table": ""
       },
       {
         "Value": 4,
-        "Description": " (Etoile à neutrons)",
+        "Description": " : Etoile à neutrons",
         "Table": ""
       },
       {
         "Value": 5,
-        "Description": " (Naine blanche)",
+        "Description": " : Naine blanche",
         "Table": ""
       },
       {
         "Value": 6,
-        "Description": " (Naine blanche)",
+        "Description": " : Naine blanche",
         "Table": ""
       },
       {
         "Value": 7,
-        "Description": " (Naine blanche)",
+        "Description": " : Naine blanche",
         "Table": ""
       },
       {
         "Value": 8,
-        "Description": " (Naine blanche)",
+        "Description": " : Naine blanche",
         "Table": ""
       },
       {
         "Value": 9,
-        "Description": " (Naine blanche)",
+        "Description": " : Naine blanche",
         "Table": ""
       },
       {
         "Value": 10,
-        "Description": " (Etoile à neutrons)",
+        "Description": " : Etoile à neutrons",
         "Table": ""
       },
       {
         "Value": 11,
-        "Description": " (Etoile à neutrons)",
+        "Description": " : Etoile à neutrons",
         "Table": ""
       },
       {
         "Value": 12,
-        "Description": " (Etoile à neutrons)",
+        "Description": " : Etoile à neutrons",
         "Table": ""
       }
     ]
@@ -189,57 +189,57 @@
     "Results": [
       {
         "Value": 2,
-        "Description": " (2 individus)",
+        "Description": "2 Follets",
         "Table": "Follets.Comportement"
       },
       {
         "Value": 3,
-        "Description": " (3 individus)",
+        "Description": "3 Follets",
         "Table": "Follets.Comportement"
       },
       {
         "Value": 4,
-        "Description": " (4 individus)",
+        "Description": "4 Follets",
         "Table": "Follets.Comportement"
       },
       {
         "Value": 5,
-        "Description": " (5 individus)",
+        "Description": "5 Follets",
         "Table": "Follets.Comportement"
       },
       {
         "Value": 6,
-        "Description": " (6 individus)",
+        "Description": "6 Follets",
         "Table": "Follets.Comportement"
       },
       {
         "Value": 7,
-        "Description": " (7 individus)",
+        "Description": "7 Follets",
         "Table": "Follets.Comportement"
       },
       {
         "Value": 8,
-        "Description": " (8 individus)",
+        "Description": "8 Follets ",
         "Table": "Follets.Comportement"
       },
       {
         "Value": 9,
-        "Description": " (9 individus)",
+        "Description": "9 Follets",
         "Table": "Follets.Comportement"
       },
       {
         "Value": 10,
-        "Description": " (10 individus)",
+        "Description": "10 Follets",
         "Table": "Follets.Comportement"
       },
       {
         "Value": 11,
-        "Description": " (11 individus)",
+        "Description": "11 Follets",
         "Table": "Follets.Comportement"
       },
       {
         "Value": 12,
-        "Description": " (12 individus)",
+        "Description": "12 Follets",
         "Table": "Follets.Comportement"
       }
     ]
@@ -251,57 +251,57 @@
     "Results": [
       {
         "Value": 2,
-        "Description": " - Hostilité : attaque immédiate.",
+        "Description": " hostiles (attaque immédiate)",
         "Table": ""
       },
       {
         "Value": 3,
-        "Description": " - Hostilité : attaque immédiate.",
+        "Description": " hostiles (attaque immédiate)",
         "Table": ""
       },
       {
         "Value": 4,
-        "Description": " - Hostilité : attaque immédiate.",
+        "Description": " hostiles (attaque immédiate)",
         "Table": ""
       },
       {
         "Value": 5,
-        "Description": " - Hostilité : attaque immédiate.",
+        "Description": " hostiles (attaque immédiate)",
         "Table": ""
       },
       {
         "Value": 6,
-        "Description": " - Méfiance : attaque si provocation.",
+        "Description": " méfiants (attaque si provocation)",
         "Table": ""
       },
       {
         "Value": 7,
-        "Description": " - Méfiance : attaque si provocation.",
+        "Description": " méfiants (attaque si provocation)",
         "Table": ""
       },
       {
         "Value": 8,
-        "Description": " - Méfiance : attaque si provocation.",
+        "Description": " méfiants (attaque si provocation)",
         "Table": ""
       },
       {
         "Value": 9,
-        "Description": " - Méfiance : attaque si provocation.",
+        "Description": " méfiants (attaque si provocation)",
         "Table": ""
       },
       {
         "Value": 10,
-        "Description": " - Indifférence.",
+        "Description": " indifférents",
         "Table": ""
       },
       {
         "Value": 11,
-        "Description": " - Indifférence.",
+        "Description": " indifférents",
         "Table": ""
       },
       {
         "Value": 12,
-        "Description": " - Communication.",
+        "Description": " bavards (communication)",
         "Table": ""
       }
     ]
@@ -333,7 +333,7 @@
       },
       {
         "Value": 5,
-        "Description": "Follets",
+        "Description": "",
         "Table": "Follets"
       },
       {
@@ -370,7 +370,7 @@
       },
       {
         "Value": 5,
-        "Description": "Follets",
+        "Description": "",
         "Table": "Follets"
       },
       {
@@ -408,7 +408,7 @@
       },
       {
         "Value": 5,
-        "Description": "Follets",
+        "Description": "",
         "Table": "Follets"
       },
       {
@@ -446,7 +446,7 @@
       },
       {
         "Value": 5,
-        "Description": "Follets",
+        "Description": "",
         "Table": "Follets"
       },
       {
@@ -483,7 +483,7 @@
       },
       {
         "Value": 5,
-        "Description": "Follets",
+        "Description": "",
         "Table": "Follets"
       },
       {
